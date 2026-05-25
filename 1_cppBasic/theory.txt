@@ -1,0 +1,8 @@
+Compilers will sometimes report that an error has occurred on the line after the one 
+where we’d conventionally fix the issue. If you can’t find the error on the line indicated, 
+check the prior line.
+
+
+Don’t use multi-line comments inside other multi-line comments. 
+Wrapping single-line comments inside a multi-line comment is okay.
+
