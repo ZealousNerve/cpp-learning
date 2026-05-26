@@ -6,3 +6,32 @@ check the prior line.
 Don’t use multi-line comments inside other multi-line comments. 
 Wrapping single-line comments inside a multi-line comment is okay.
 
+
+If the variable or function name is multi-word, there are two common conventions: 
+words separated by underscores (sometimes called snake_case), or intercapped 
+(sometimes called camelCase, since the capital letters stick up like the humps on a camel).
+
+
+Preprocessor directives (e.g. #include <iostream>) must be placed on separate lines:
+#include <iostream>
+#include <string>
+
+
+
+If a long line is split with an operator (eg. << or +), the operator should be placed 
+at the beginning of the next line, not the end of the current line
+
+std::cout << 3 + 4
+    + 5 + 6
+    * 7 * 8;
+
+
+ A literal’s value is placed directly in the executable, and the executable itself can’t 
+ be changed after it is created. A variable’s value is placed in memory, and the value of 
+ memory can be changed while the executable is running.
+
+ types of operator - unary(one operand), binary(two operand), ternary(three operrand), nullary(0 operand)
+ 
+
+ Both operator= and operator<< (when used to output values to the console) return their left operand. 
+ Thus, x = 5 returns x, and std::cout << 5 returns std::cout. This is done so that these operators can be chained.
