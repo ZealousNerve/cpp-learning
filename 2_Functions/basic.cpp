@@ -26,5 +26,5 @@ did not execute successfully. */
 
 int main()
 {
-    return EXIT_SUCCESS;
+    return EXIT_FAILURE;
 }
