@@ -26,12 +26,15 @@ std::cout << 3 + 4
     * 7 * 8;
 
 
- A literal’s value is placed directly in the executable, and the executable itself can’t 
- be changed after it is created. A variable’s value is placed in memory, and the value of 
- memory can be changed while the executable is running.
+A literal’s value is placed directly in the executable, and the executable itself can’t 
+be changed after it is created. A variable’s value is placed in memory, and the value of 
+memory can be changed while the executable is running.
 
- types of operator - unary(one operand), binary(two operand), ternary(three operrand), nullary(0 operand)
+types of operator - unary(one operand), binary(two operand), ternary(three operrand), nullary(0 operand)
  
 
- Both operator= and operator<< (when used to output values to the console) return their left operand. 
- Thus, x = 5 returns x, and std::cout << 5 returns std::cout. This is done so that these operators can be chained.
+Both operator= and operator<< (when used to output values to the console) return their left operand. 
+Thus, x = 5 returns x, and std::cout << 5 returns std::cout. This is done so that these operators can be chained.
+
+C++ is designed so that each source file can be compiled independently, with no knowledge of what is in other files.
+Therefore, the order in which files are actually compiled should not be relevant.

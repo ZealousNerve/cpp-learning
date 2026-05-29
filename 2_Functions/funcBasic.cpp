@@ -28,3 +28,8 @@ int main()
 {
     return EXIT_FAILURE;
 }
+
+//Failure to return a value from a value-returning function will cause undefined behavior.
+//only function main() is a exception to above line
+//The function main() will implicitly return the value 0 if no return statement is provided.
+//A value-returning function can only return a single value back to the caller each time it is called.
