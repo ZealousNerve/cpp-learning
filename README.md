@@ -206,9 +206,40 @@ cpp-mastery/
 
 ## ◈ Key Insights So Far
 
-> The things I didn't know I didn't know. Updated every chapter.
+> Summary of Each Chapter
 
-<details>
+1. [Ch.1, C++ Basics](01_basics/README.md)
+2. [Ch.2, Functions](02_functions/README.md)
+3. [Ch.3, Debugging](03_debugging/README.md)
+4. [Ch.4, DataTypes](04_data_types/README.md)
+5. [Ch.5, Constants Strings](05_constants_strings/README.md)
+6. [Ch.6, Operators](06_operators/README.md)
+7. [Ch.7, Scope Linkage](07_scope_linkage/README.md)
+8. [Ch.8, Control Flow](08_control_flow/README.md)
+9. [Ch.9, Error Handling](09_error_handling/README.md)
+10. [Ch.10, Type System](10_type_system/README.md)
+11. [Ch.11, Templates](11_templates/README.md)
+12. [Ch.12, Refrence Pointers](12_references_pointers/README.md)
+13. [Ch.13, Enums, Struct](13_enums_structs/README.md)
+14. [Ch.14, Classes](14_classes/README.md)
+15. [Ch.15, More Classes](15_more_classes/README.md)
+16. [Ch.16, Vectors](16_vectors/README.md)
+17. [Ch.17, Arrays](17_arrays/README.md)
+18. [Ch.18, Iterators Algorithm](18_iterators_algorithms/README.md)
+19. [Ch.19, Dynamic Allocation](19_dynamic_allocation/README.md)
+20. [Ch.20, Advanced Functions](20_advanced_functions/README.md)
+21. [Ch.21, Operator Overloading](21_operator_overloading/README.md)
+22. [Ch.21, Smart Pointers](22_smart_pointers/README.md)
+23. [Ch.23, Object Relationship](23_object_relationships/README.md)
+24. [Ch.24, Inheritance](24_inheritance/README.md)
+25. [Ch.25, Virtual Functions](25_virtual_functions/README.md)
+26. [Ch.26, Templates Classes](26_templates_classes/README.md)
+27. [Ch.27, Exceptions](27_exceptions/README.md)
+28. [Ch.28, IO Streams](28_io_streams/README.md)
+
+
+<!-- instead of dropdown menu i chose above formmating
+ <details>
 <summary><strong>Ch.1, C++ Basics</strong></summary>
 
 ```cpp
@@ -263,7 +294,7 @@ Macros don't respect scope. This is why `constexpr` exists to replace `#define`.
 two `.cpp` files include that header. Declarations are fine to include
 multiple times, that's exactly what header guards protect against.
 
-</details>
+</details> -->
 
 ---
 
@@ -347,7 +378,6 @@ and a completely different mental model around memory.
 This repo is my commitment: to spend this summer going deep on C++ the *right* way,
 not surface-level syntax familiarity, but genuine understanding of what the machine is doing.
 
-The standard I'm holding myself to: **would this code make a senior SDE at a systems company nod?**
 
 ---
 

@@ -33,3 +33,7 @@ Thumbs.db
  
 # ── Sandbox (optional, remove if you want to track test.cpp) ──
 _sandbox/*.exe
+
+# few extra files
+ROADMAP.md
+CHANGELOG.md
