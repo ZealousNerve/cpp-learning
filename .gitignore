@@ -1,3 +1,35 @@
+# ── Compiled output ─────────────────────────
 *.exe
 *.out
+*.obj
 *.o
+*.pch
+*.gch
+*.d
+*.ilk
+*.pdb
+ 
+# ── CMake ────────────────────────────────────
+CMakeFiles/
+cmake-build-*/
+CMakeCache.txt
+Makefile
+*.cmake
+ 
+# ── CLion ────────────────────────────────────
+.idea/
+ 
+# ── VS Code ──────────────────────────────────
+.vscode/
+ 
+# ── Build directories ────────────────────────
+build/
+bin/
+out/
+ 
+# ── OS noise ─────────────────────────────────
+.DS_Store
+Thumbs.db
+ 
+# ── Sandbox (optional — remove if you want to track test.cpp) ──
+_sandbox/*.exe
