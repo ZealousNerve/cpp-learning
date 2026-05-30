@@ -31,5 +31,5 @@ out/
 .DS_Store
 Thumbs.db
  
-# ── Sandbox (optional — remove if you want to track test.cpp) ──
+# ── Sandbox (optional, remove if you want to track test.cpp) ──
 _sandbox/*.exe

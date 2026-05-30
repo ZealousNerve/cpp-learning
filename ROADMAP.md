@@ -1,4 +1,4 @@
-# Roadmap — LearnCpp.com Chapter Tracker
+# Roadmap -> LearnCpp.com Chapter Tracker
 
 > This file tracks every chapter and section of [LearnCpp.com](https://learncpp.com).
 > Check off sections as I complete them. Update `README.md` progress table to match.
@@ -15,7 +15,7 @@
 
 ---
 
-## Chapter 0 — Introduction / Getting Started
+## Chapter 0 -> Introduction / Getting Started
 
 - [x] 0.1 Introduction to these tutorials
 - [x] 0.2 Introduction to programs and programming languages
@@ -33,7 +33,7 @@
 
 ---
 
-## Chapter 1 — C++ Basics
+## Chapter 1 -> C++ Basics
 
 - [x] 1.1 Statements and the structure of a program
 - [x] 1.2 Comments
@@ -50,7 +50,7 @@
 
 ---
 
-## Chapter 2 — C++ Basics: Functions and Files
+## Chapter 2 -> C++ Basics: Functions and Files
 
 - [x] 2.1 Introduction to functions
 - [x] 2.2 Function return values (value-returning functions)
@@ -69,7 +69,7 @@
 
 ---
 
-## Chapter 3 — Debugging C++ Programs
+## Chapter 3 -> Debugging C++ Programs
 
 - [ ] 3.1 Syntax and semantic errors
 - [ ] 3.2 The debugging process
@@ -85,7 +85,7 @@
 
 ---
 
-## Chapter 4 — Fundamental Data Types
+## Chapter 4 -> Fundamental Data Types
 
 - [ ] 4.1 Introduction to fundamental data types
 - [ ] 4.2 Void
@@ -103,7 +103,7 @@
 
 ---
 
-## Chapter 5 — Constants and Strings
+## Chapter 5 -> Constants and Strings
 
 - [ ] 5.1 Constant variables (named constants)
 - [ ] 5.2 Literals
@@ -118,7 +118,7 @@
 
 ---
 
-## Chapter 6 — Operators
+## Chapter 6 -> Operators
 
 - [ ] 6.1 Operator precedence and associativity
 - [ ] 6.2 Arithmetic operators
@@ -132,7 +132,7 @@
 
 ---
 
-## Chapter 7 — Scope, Duration, and Linkage
+## Chapter 7 -> Scope, Duration, and Linkage
 
 - [ ] 7.1 Compound statements (blocks)
 - [ ] 7.2 User-defined namespaces and the scope resolution operator
@@ -152,7 +152,7 @@
 
 ---
 
-## Chapter 8 — Control Flow
+## Chapter 8 -> Control Flow
 
 - [ ] 8.1 – 8.15 *(expand as I reach this chapter)*
 
@@ -161,29 +161,29 @@
 ## Chapters 9–28
 
 > Sections will be expanded in full as I reach each chapter.
-> Keeping this file lean until then — no point tracking sections I haven't read.
+> Keeping this file lean until then -> no point tracking sections I haven't read.
 
-- [ ] Ch.9  — Error Detection and Handling
-- [ ] Ch.10 — Type Conversion, Type Aliases, and Type Deduction
-- [ ] Ch.11 — Function Overloading and Function Templates
-- [ ] Ch.12 — Compound Types: References and Pointers
-- [ ] Ch.13 — Compound Types: Enums and Structs
-- [ ] Ch.14 — Introduction to Classes
-- [ ] Ch.15 — More on Classes
-- [ ] Ch.16 — Dynamic Arrays: std::vector
-- [ ] Ch.17 — Fixed-size Arrays: std::array and C-style Arrays
-- [ ] Ch.18 — Iterators and Algorithms
-- [ ] Ch.19 — Dynamic Allocation
-- [ ] Ch.20 — Advanced Functions
-- [ ] Ch.21 — Operator Overloading
-- [ ] Ch.22 — Move Semantics and Smart Pointers
-- [ ] Ch.23 — Object Relationships
-- [ ] Ch.24 — Inheritance
-- [ ] Ch.25 — Virtual Functions
-- [ ] Ch.26 — Templates and Classes
-- [ ] Ch.27 — Exceptions
-- [ ] Ch.28 — Input and Output (I/O)
+- [ ] Ch.9  -> Error Detection and Handling
+- [ ] Ch.10 -> Type Conversion, Type Aliases, and Type Deduction
+- [ ] Ch.11 -> Function Overloading and Function Templates
+- [ ] Ch.12 -> Compound Types: References and Pointers
+- [ ] Ch.13 -> Compound Types: Enums and Structs
+- [ ] Ch.14 -> Introduction to Classes
+- [ ] Ch.15 -> More on Classes
+- [ ] Ch.16 -> Dynamic Arrays: std::vector
+- [ ] Ch.17 -> Fixed-size Arrays: std::array and C-style Arrays
+- [ ] Ch.18 -> Iterators and Algorithms
+- [ ] Ch.19 -> Dynamic Allocation
+- [ ] Ch.20 -> Advanced Functions
+- [ ] Ch.21 -> Operator Overloading
+- [ ] Ch.22 -> Move Semantics and Smart Pointers
+- [ ] Ch.23 -> Object Relationships
+- [ ] Ch.24 -> Inheritance
+- [ ] Ch.25 -> Virtual Functions
+- [ ] Ch.26 -> Templates and Classes
+- [ ] Ch.27 -> Exceptions
+- [ ] Ch.28 -> Input and Output (I/O)
 
 ---
 
-*Last updated: June 2025 — starting summer break grind*
+*Last updated: June 2025 -> starting summer break grind*

@@ -1,6 +1,6 @@
 /**
- * TOPIC  : Header Files — Declarations across multiple source files
- * CHAPTER: 2.11 — Header files
+ * TOPIC  : Header Files, Declarations across multiple source files
+ * CHAPTER: 2.11, Header files
  * SOURCE : https://learncpp.com/cpp-tutorial/header-files/
  *
  * KEY INSIGHT: Header files solve a specific problem: the compiler processes
@@ -41,7 +41,7 @@
 //             #endif
 //             (see header_guards.cpp)
 //
-//   PART 2: Declarations only — no definitions
+//   PART 2: Declarations only, no definitions
 //             int add(int x, int y);          ← declaration ✅
 //             int add(int x, int y) { ... }   ← definition ❌ (in header = ODR violation risk)
 //
@@ -63,7 +63,7 @@
 //       add(3, 4);                       add(3, 4);
 //   }                                }
 //
-// This is why the compiler can validate the call to add() — its declaration
+// This is why the compiler can validate the call to add(), its declaration
 // is now present in the translation unit.
  
  
@@ -76,19 +76,19 @@
 //                          use for: your own project's header files
 //
 // Using angle brackets for your own headers works on most setups but is
-// technically wrong — quotes convey the intent ("local file") clearly.
+// technically wrong, quotes convey the intent ("local file") clearly.
  
  
 // ── STANDARD LIBRARY HEADERS: NO .h EXTENSION ────────────────────────────────
 //
 // The C++ standard library headers have NO file extension:
 //   ✅ #include <iostream>    (C++ standard)
-//   ❌ #include <iostream.h>  (old C++ — obsolete, avoid)
+//   ❌ #include <iostream.h>  (old C++, obsolete, avoid)
 //
 // C standard library headers accessed from C++ use the c prefix, no .h:
 //   ✅ #include <cstdlib>     (C++ way to include C's stdlib.h)
 //   ✅ #include <cmath>       (C++ way to include C's math.h)
-//   ❌ #include <stdlib.h>    (works but is the C way — avoid in C++ code)
+//   ❌ #include <stdlib.h>    (works but is the C way, avoid in C++ code)
 //
 // Your OWN header files should use the .h extension: mymath.h, player.h, etc.
  
@@ -105,7 +105,7 @@
 //     #include "math.cpp"   // illegal by convention, causes redefinition errors
 //
 // ❌ Using relative paths in #include directives
-//     #include "../utils/helper.h"   // fragile — breaks if directory structure changes
+//     #include "../utils/helper.h"   // fragile, breaks if directory structure changes
 //     // Instead: add the include directory to your compiler's -I flag
 //
 // ✅ What belongs in headers:
@@ -113,7 +113,7 @@
 //     Class declarations
 //     Type definitions (typedefs, using aliases)
 //     constexpr / inline variables
-//     Template definitions (special case — must be in headers for linkage reasons)
+//     Template definitions (special case, must be in headers for linkage reasons)
 //     Other #includes that this header itself depends on
  
  
@@ -121,7 +121,7 @@
 //
 // It is common for headers to #include other headers they depend on.
 // For example, a Vector3D.h might #include <cmath> because it uses sqrt().
-// This is fine — the preprocessor handles recursive inclusion.
+// This is fine, the preprocessor handles recursive inclusion.
 // Header guards (next file) prevent the same header from being included twice.
  
  

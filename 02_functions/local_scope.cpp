@@ -1,6 +1,6 @@
 /**
  * TOPIC  : Local Scope & Variable Lifetime
- * CHAPTER: 2.5 — Introduction to local scope
+ * CHAPTER: 2.5, Introduction to local scope
  * SOURCE : https://learncpp.com/cpp-tutorial/introduction-to-local-scope/
  *
  * KEY INSIGHT: Scope and lifetime are different properties.
@@ -13,12 +13,12 @@
  
 // ── Destruction order is LIFO ────────────────────────────────────────────────
 // When add() returns, y is destroyed BEFORE x, even though x was created first.
-// This mirrors a stack — last in, first out.
+// This mirrors a stack, last in, first out.
  
 int add(int x, int y)   // x and y created here (enter scope)
 {
     return x + y;
-}   // y destroyed first, then x — reverse of creation order
+}   // y destroyed first, then x, reverse of creation order
  
 int main()
 {
@@ -28,7 +28,7 @@ int main()
     std::cout << add(a, b) << '\n';
  
     return 0;
-}   // b destroyed first, then a — reverse of declaration order
+}   // b destroyed first, then a, reverse of declaration order
  
 // ── Temporary objects have no scope ─────────────────────────────────────────
 // The return value of add() is a temporary object (an rvalue).

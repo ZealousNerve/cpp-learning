@@ -1,13 +1,13 @@
 /**
  * TOPIC  : Macros & Conditional Compilation
- * CHAPTER: 2.10 — Introduction to the preprocessor (macros section)
+ * CHAPTER: 2.10, Introduction to the preprocessor (macros section)
  * SOURCE : https://learncpp.com/cpp-tutorial/introduction-to-the-preprocessor/
  *
  * KEY INSIGHT: Macros are pure text substitution with ZERO awareness of C++ types,
  *              scope, or semantics. They look like they belong in your code but
  *              they operate in a completely different layer. This is why every
  *              modern C++ feature (constexpr, inline, templates) exists to
- *              replace them. Learn macros to READ legacy code — prefer constexpr
+ *              replace them. Learn macros to READ legacy code, prefer constexpr
  *              when writing new code.
  */
  
@@ -18,7 +18,7 @@
 //
 // A macro is a find-and-replace rule for the preprocessor.
 // When the preprocessor sees the identifier, it replaces it with the
-// substitution text — BEFORE the compiler ever parses the code.
+// substitution text, BEFORE the compiler ever parses the code.
 //
 // Two types:
 //   Object-like macros:   #define IDENTIFIER substitution_text
@@ -44,7 +44,7 @@
 // int result = DOUBLE(3) * 10;    // you'd expect 60
 // After substitution: 3 + 3 * 10  // operator precedence: 3 + 30 = 33 ❌
 //
-// Fix (still bad — use inline functions instead):
+// Fix (still bad, use inline functions instead):
 // #define DOUBLE(x) ((x) + (x))   // wrapping each operand and the whole expression
 //
 // The rule: avoid macros with substitution text unless there is genuinely no
@@ -54,7 +54,7 @@
 // ── CONDITIONAL COMPILATION: #ifdef / #ifndef / #endif ────────────────────────
 //
 // These let you include or exclude code at the preprocessor level.
-// The excluded code is removed before the compiler ever sees it —
+// The excluded code is removed before the compiler ever sees it,
 // it does not appear in the object file at all.
 //
 // Use case 1: Platform-specific code
@@ -72,23 +72,23 @@
 // Use case 3: Header guards (see header_guards.cpp)
  
 #define PRINT_JOE   // defines the identifier PRINT_JOE (no substitution text)
-                    // just its existence is enough — #ifdef checks for existence only
+                    // just its existence is enough, #ifdef checks for existence only
  
 int demonstrate_ifdef()
 {
 #ifdef PRINT_JOE
-    std::cout << "Joe\n";           // ✅ compiled — PRINT_JOE is defined above
+    std::cout << "Joe\n";           // ✅ compiled, PRINT_JOE is defined above
 #endif
  
 #ifdef PRINT_BOB
-    std::cout << "Bob\n";           // ❌ NOT compiled — PRINT_BOB was never #defined
+    std::cout << "Bob\n";           // ❌ NOT compiled, PRINT_BOB was never #defined
 #endif                              //    this entire block is removed before compilation
  
     return 0;
 }
  
  
-// ── #ifndef — the opposite of #ifdef ──────────────────────────────────────────
+// ── #ifndef, the opposite of #ifdef ──────────────────────────────────────────
 //
 // #ifndef means "if NOT defined." Compile this block only if the identifier
 // has NOT been #defined yet.
@@ -104,7 +104,7 @@ int demonstrate_ifndef()
 }
  
  
-// ── #if 0 — the best comment block in C++ ─────────────────────────────────────
+// ── #if 0, the best comment block in C++ ─────────────────────────────────────
 //
 // Multi-line comments /* ... */ cannot be nested. If you wrap code that
 // already contains a comment, the comment ends prematurely and you get errors.
@@ -127,10 +127,10 @@ int demonstrate_if_zero()
     std::cout << "This line always runs\n";
  
 #if 0
-    // Entire block excluded — not compiled, not even parsed
+    // Entire block excluded, not compiled, not even parsed
     std::cout << "This line never runs\n";
     std::cout << "Neither does this\n";
-    // Even broken C++ would be fine here — it's pure text to the preprocessor
+    // Even broken C++ would be fine here, it's pure text to the preprocessor
 #endif
  
     return 0;

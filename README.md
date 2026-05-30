@@ -10,7 +10,7 @@
  ╚═════╝╚═╝     ╚═╝           ╚═╝     ╚═╝╚═╝  ╚═╝╚══════╝   ╚═╝   ╚══════╝╚═╝  ╚═╝   ╚═╝  
 ```
 
-**`// Learning C++ the right way — one concept, one file, zero shortcuts`**
+**`// Learning C++ the right way, one concept, one file, zero shortcuts`**
 
 <br/>
 
@@ -32,9 +32,9 @@
 
 ## ◈ What This Repository Is
 
-This is not a collection of random C++ snippets. This is a **structured, annotated learning journal** built on top of [LearnCpp.com](https://learncpp.com) — the gold standard free resource for modern C++.
+This is not a collection of random C++ snippets. This is a **structured, annotated learning journal** built on top of [LearnCpp.com](https://learncpp.com), the gold standard free resource for modern C++.
 
-**The discipline:** After reading each chapter section, I extract only what matters — the non-obvious rules, the gotchas, the "why" behind the "what" — and encode it in a single, focused `.cpp` file. Every comment is a learning insight. Every file compiles and runs cleanly.
+**The discipline:** After reading each chapter section, I extract only what matters, the non-obvious rules, the gotchas, the "why" behind the "what", and encode it in a single, focused `.cpp` file. Every comment is a learning insight. Every file compiles and runs cleanly.
 
 **The philosophy:**
 - One concept per file. No bloat.
@@ -176,31 +176,31 @@ cpp-mastery/
 | Ch.1 | C++ Basics | `✅ Done` | 3 |
 | Ch.2 | Functions & Files | `✅ Done` | 8 |
 | Ch.3 | Debugging | `🔄 In Progress` | 0 |
-| Ch.4 | Fundamental Data Types | `⬜ Upcoming` | — |
-| Ch.5 | Constants & Strings | `⬜ Upcoming` | — |
-| Ch.6 | Operators | `⬜ Upcoming` | — |
-| Ch.7 | Scope, Duration, Linkage | `⬜ Upcoming` | — |
-| Ch.8 | Control Flow | `⬜ Upcoming` | — |
-| Ch.9 | Error Detection & Handling | `⬜ Upcoming` | — |
-| Ch.10 | Type Conversion & Deduction | `⬜ Upcoming` | — |
-| Ch.11 | Function Overloading & Templates | `⬜ Upcoming` | — |
-| Ch.12 | References & Pointers | `⬜ Upcoming` | — |
-| Ch.13 | Enums & Structs | `⬜ Upcoming` | — |
-| Ch.14 | Introduction to Classes | `⬜ Upcoming` | — |
-| Ch.15 | More on Classes | `⬜ Upcoming` | — |
-| Ch.16 | Dynamic Arrays: `std::vector` | `⬜ Upcoming` | — |
-| Ch.17 | Fixed Arrays: `std::array` | `⬜ Upcoming` | — |
-| Ch.18 | Iterators & Algorithms | `⬜ Upcoming` | — |
-| Ch.19 | Dynamic Allocation | `⬜ Upcoming` | — |
-| Ch.20 | Advanced Functions & Lambdas | `⬜ Upcoming` | — |
-| Ch.21 | Operator Overloading | `⬜ Upcoming` | — |
-| Ch.22 | Smart Pointers & Move Semantics | `⬜ Upcoming` | — |
-| Ch.23 | Object Relationships | `⬜ Upcoming` | — |
-| Ch.24 | Inheritance | `⬜ Upcoming` | — |
-| Ch.25 | Virtual Functions & Polymorphism | `⬜ Upcoming` | — |
-| Ch.26 | Templates & Classes | `⬜ Upcoming` | — |
-| Ch.27 | Exceptions | `⬜ Upcoming` | — |
-| Ch.28 | Input & Output Streams | `⬜ Upcoming` | — |
+| Ch.4 | Fundamental Data Types | `⬜ Upcoming` |, |
+| Ch.5 | Constants & Strings | `⬜ Upcoming` |, |
+| Ch.6 | Operators | `⬜ Upcoming` |, |
+| Ch.7 | Scope, Duration, Linkage | `⬜ Upcoming` |, |
+| Ch.8 | Control Flow | `⬜ Upcoming` |, |
+| Ch.9 | Error Detection & Handling | `⬜ Upcoming` |, |
+| Ch.10 | Type Conversion & Deduction | `⬜ Upcoming` |, |
+| Ch.11 | Function Overloading & Templates | `⬜ Upcoming` |, |
+| Ch.12 | References & Pointers | `⬜ Upcoming` |, |
+| Ch.13 | Enums & Structs | `⬜ Upcoming` |, |
+| Ch.14 | Introduction to Classes | `⬜ Upcoming` |, |
+| Ch.15 | More on Classes | `⬜ Upcoming` |, |
+| Ch.16 | Dynamic Arrays: `std::vector` | `⬜ Upcoming` |, |
+| Ch.17 | Fixed Arrays: `std::array` | `⬜ Upcoming` |, |
+| Ch.18 | Iterators & Algorithms | `⬜ Upcoming` |, |
+| Ch.19 | Dynamic Allocation | `⬜ Upcoming` |, |
+| Ch.20 | Advanced Functions & Lambdas | `⬜ Upcoming` |, |
+| Ch.21 | Operator Overloading | `⬜ Upcoming` |, |
+| Ch.22 | Smart Pointers & Move Semantics | `⬜ Upcoming` |, |
+| Ch.23 | Object Relationships | `⬜ Upcoming` |, |
+| Ch.24 | Inheritance | `⬜ Upcoming` |, |
+| Ch.25 | Virtual Functions & Polymorphism | `⬜ Upcoming` |, |
+| Ch.26 | Templates & Classes | `⬜ Upcoming` |, |
+| Ch.27 | Exceptions | `⬜ Upcoming` |, |
+| Ch.28 | Input & Output Streams | `⬜ Upcoming` |, |
 
 ---
 
@@ -209,18 +209,18 @@ cpp-mastery/
 > The things I didn't know I didn't know. Updated every chapter.
 
 <details>
-<summary><strong>Ch.1 — C++ Basics</strong></summary>
+<summary><strong>Ch.1, C++ Basics</strong></summary>
 
 ```cpp
 // ❌ What most beginners do
-int x;          // undefined value — could be 0, could be garbage
+int x;          // undefined value, could be 0, could be garbage
 
 // ✅ What C++17 best practice says
-int x {};       // value-initialization — always 0 for ints
+int x {};       // value-initialization, always 0 for ints
 
 // 🔥 The trap nobody warns you about
-int w1 { 4.5 }; // COMPILE ERROR — list-init catches narrowing conversions
-int w2 = 4.5;   // silently loses .5 — no warning by default
+int w1 { 4.5 }; // COMPILE ERROR, list-init catches narrowing conversions
+int w2 = 4.5;   // silently loses .5, no warning by default
 ```
 
 **The endl vs \\n trap:** `std::endl` flushes the output buffer every single call.
@@ -234,7 +234,7 @@ without waiting for the user. This is the root of most beginner input bugs.
 </details>
 
 <details>
-<summary><strong>Ch.2 — Functions & Files</strong></summary>
+<summary><strong>Ch.2, Functions & Files</strong></summary>
 
 ```cpp
 // The thing about main() most people miss:
@@ -242,7 +242,7 @@ without waiting for the user. This is the root of most beginner input bugs.
 // If a global's initializer calls a function, that function
 // runs before main(). main() is NOT always first.
 
-// Status codes — use the portable way:
+// Status codes, use the portable way:
 #include <cstdlib>
 return EXIT_SUCCESS; // more expressive than return 0;
 return EXIT_FAILURE; // the only meaningful non-zero value
@@ -254,14 +254,14 @@ int foo(int x) { return x * 2; }       // defined later
 ```
 
 **The preprocessor is not C++.** It runs as a pure text-substitution pass
-before any C++ parsing. `#define`, `#include`, `#ifdef` — none of these
+before any C++ parsing. `#define`, `#include`, `#ifdef`, none of these
 are C++ statements. They have no semicolons. They don't understand types.
 Macros don't respect scope. This is why `constexpr` exists to replace `#define`.
 
 **Header files only declare, never define (usually).** Putting a function
 *definition* in a header causes "multiple definition" linker errors when
 two `.cpp` files include that header. Declarations are fine to include
-multiple times — that's exactly what header guards protect against.
+multiple times, that's exactly what header guards protect against.
 
 </details>
 
@@ -274,12 +274,12 @@ Every `.cpp` file in this repo follows the same structure, making them scannable
 ```cpp
 /**
  * TOPIC : Local Scope & Variable Lifetime
- * CHAPTER: 2.5 — Introduction to local scope
+ * CHAPTER: 2.5, Introduction to local scope
  * SOURCE : https://learncpp.com/cpp-tutorial/introduction-to-local-scope/
  *
  * KEY INSIGHT: Local variables are created at their point of definition
  *              and destroyed in reverse order when they go out of scope.
- *              Destruction order matters — it's LIFO, not FIFO.
+ *              Destruction order matters, it's LIFO, not FIFO.
  */
 
 // ── CONCEPT 1: Scope vs Lifetime ──────────────────────────────────────────
@@ -292,7 +292,7 @@ Every `.cpp` file in this repo follows the same structure, making them scannable
 int add(int x, int y)   // x, y created here
 {
     return x + y;
-}   // y destroyed first, then x — reverse order
+}   // y destroyed first, then x, reverse order
 
 int main()
 {
@@ -302,7 +302,7 @@ int main()
     std::cout << add(a, b) << '\n';
 
     return 0;
-}   // b destroyed first, then a — reverse declaration order
+}   // b destroyed first, then a, reverse declaration order
     // Best practice: define variables close to first use
 ```
 
@@ -312,7 +312,7 @@ int main()
 
 | Category | Tool | Notes |
 |----------|------|-------|
-| **Machine** | HP Omen — Ryzen 7 7840HS + RTX 4060 | Compiles fast |
+| **Machine** | HP Omen, Ryzen 7 7840HS + RTX 4060 | Compiles fast |
 | **OS** | Windows 11 + WSL2 (Kali Linux) | Best of both worlds |
 | **IDE** | JetBrains CLion (student license) | Refactoring + debugger |
 | **Compiler** | MinGW-w64 (GCC), `-std=c++17 -Wall -Wextra` | Strict warnings on |
@@ -324,7 +324,7 @@ int main()
 
 ## ◈ Build Instructions
 
-All files are standalone — compile any single file directly:
+All files are standalone, compile any single file directly:
 
 ```bash
 # Standard compile (any chapter file)
@@ -333,7 +333,7 @@ g++ -std=c++17 -Wall -Wextra -o out filename.cpp && ./out
 # With sanitizers (recommended for pointer/memory chapters)
 g++ -std=c++17 -Wall -Wextra -fsanitize=address,undefined -o out filename.cpp && ./out
 
-# CLion: just open the project — CMakeLists.txt handles everything
+# CLion: just open the project, CMakeLists.txt handles everything
 ```
 
 ---
@@ -344,7 +344,7 @@ I'm a B.Tech CSE student at **IIIT Bhopal**, currently on summer break after sem
 I already know Java from my OOP coursework, but C++ has different rules, different pitfalls,
 and a completely different mental model around memory.
 
-This repo is my commitment: to spend this summer going deep on C++ the *right* way —
+This repo is my commitment: to spend this summer going deep on C++ the *right* way,
 not surface-level syntax familiarity, but genuine understanding of what the machine is doing.
 
 The standard I'm holding myself to: **would this code make a senior SDE at a systems company nod?**
@@ -375,7 +375,7 @@ Data Structures & Algorithms in C++
 <div align="center">
 
 **If you're learning C++ too, this repo might help you.**
-**If you spot a mistake in my comments, open an issue — I want to know.**
+**If you spot a mistake in my comments, open an issue, I want to know.**
 
 <br/>
 
@@ -383,6 +383,6 @@ Data Structures & Algorithms in C++
 
 <br/>
 
-[![GitHub](https://img.shields.io/badge/Follow%20the%20Journey-GitHub-181717?style=flat-square&logo=github)](https://github.com)
+[![GitHub](https://img.shields.io/badge/Follow%20the%20Journey-GitHub-181717?style=flat-square&logo=github)](https://github.com/zealousnerve)
 
 </div>

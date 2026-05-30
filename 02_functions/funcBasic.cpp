@@ -1,6 +1,6 @@
 /**
- * TOPIC  : Function Basics — main(), return values, status codes
- * CHAPTER: 2.1-2.2 — Introduction to functions, value-returning functions
+ * TOPIC  : Function Basics, main(), return values, status codes
+ * CHAPTER: 2.1-2.2, Introduction to functions, value-returning functions
  * SOURCE : https://learncpp.com/cpp-tutorial/introduction-to-functions/
  *
  * KEY INSIGHT: main() has two unique rules no other function has.

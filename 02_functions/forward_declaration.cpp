@@ -1,11 +1,11 @@
 /**
  * TOPIC  : Forward Declarations & Definitions
- * CHAPTER: 2.7 — Forward declarations and definitions
+ * CHAPTER: 2.7, Forward declarations and definitions
  * SOURCE : https://learncpp.com/cpp-tutorial/forward-declarations-and-definitions/
  *
  * KEY INSIGHT: The compiler reads files top-to-bottom, one pass only.
  *              A forward declaration tells the compiler "this function exists
- *              and has this signature" — enough for it to validate call sites
+ *              and has this signature", enough for it to validate call sites
  *              without yet knowing the implementation.
  *              This is the foundation of how multi-file C++ programs work.
  */
@@ -24,10 +24,10 @@
 //   int main() {
 //       std::cout << add(3, 4);   // COMPILE ERROR: 'add' was not declared in this scope
 //   }
-//   int add(int x, int y) { return x + y; }  // too late — compiler already failed
+//   int add(int x, int y) { return x + y; }  // too late, compiler already failed
 //
-// ✅ Solution 1 — reorder: define add() ABOVE main()
-// ✅ Solution 2 — forward declaration: tell the compiler add() exists first
+// ✅ Solution 1, reorder: define add() ABOVE main()
+// ✅ Solution 2, forward declaration: tell the compiler add() exists first
  
  
 // ── FORWARD DECLARATION SYNTAX ───────────────────────────────────────────────
@@ -35,11 +35,11 @@
 // A declaration tells the compiler: type, name, and parameter types.
 // A definition provides: all of the above PLUS the function body.
 //
-// The parameter NAMES are optional in a declaration — only types are required.
+// The parameter NAMES are optional in a declaration, only types are required.
 // The names are helpful for documentation but carry no compiler meaning.
  
 int add(int x, int y);  // ✅ forward declaration with names (preferred for readability)
-// int add(int, int);   // ✅ also valid — names omitted
+// int add(int, int);   // ✅ also valid, names omitted
 // Both say the same thing to the compiler: "add takes two ints, returns an int"
  
  
@@ -79,7 +79,7 @@ int add(int x, int y)
 //
 // Scenario 2: Circular dependencies
 //   foo() calls bar(), and bar() calls foo().
-//   No ordering satisfies both — one must be declared before the other is defined.
+//   No ordering satisfies both, one must be declared before the other is defined.
 //   Forward declarations break the circular dependency:
 //
 //   int bar(int);       // declare bar first
@@ -91,13 +91,13 @@ int add(int x, int y)
 //   are the systematic solution. (Chapter 2.11)
  
  
-// ── DECLARATION vs DEFINITION — THE RULE ─────────────────────────────────────
+// ── DECLARATION vs DEFINITION, THE RULE ─────────────────────────────────────
 //
 // A function can be DECLARED multiple times (as long as signatures match).
 // A function can be DEFINED only ONCE across the entire program.
 //   → Declaring twice: fine
 //   → Defining twice: linker error ("multiple definition of...")
 //
-// This is the "One Definition Rule" (ODR) — one of C++'s most important rules.
+// This is the "One Definition Rule" (ODR), one of C++'s most important rules.
 // You'll encounter it again in Chapter 7 when studying linkage.
  

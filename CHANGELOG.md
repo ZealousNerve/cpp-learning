@@ -1,23 +1,23 @@
-# Changelog — Learning Milestones
+# Changelog, Learning Milestones
 
-> Every significant milestone in this journey. Not just code changes — understanding changes.
-> Format: `[Date] — What I understood for the first time.`
+> Every significant milestone in this journey. Not just code changes, understanding changes.
+> Format: `[Date] -> What I understood for the first time.`
 
 ---
 
-## [June 2025] — Summer Break Begins
+## [June 2025] -> Summer Break Begins
 
 **Repository created.** Starting the full LearnCpp.com curriculum from scratch.
 Goal: complete all 28 chapters before semester 3 begins.
 
 ### Already completed (Semester 2 coursework overlap)
 - OOP concepts from Java translated to C++ understanding
-- Basic syntax, functions, scope — covered in college OOP course
+- Basic syntax, functions, scope, covered in college OOP course
 - Set up Kali Linux on WSL2, ran first `nmap` scans
 - JetBrains CLion activated with student license + MinGW
 
 ### First genuine C++ insights (not in Java)
-- `std::endl` vs `'\n'` — endl flushes the buffer. This is not a style preference, it's a performance choice.
+- `std::endl` vs `'\n'`, endl flushes the buffer. This is not a style preference, it's a performance choice.
 - List-initialization `{}` catches narrowing conversions at compile time. Copy-initialization `=` silently truncates.
 - The preprocessor is not C++. It's a text-substitution pass that runs before the compiler ever sees your code.
 - `main()` is not always the first thing that runs. Global variable initializers run before it.

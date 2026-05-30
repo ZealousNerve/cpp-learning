@@ -1,12 +1,12 @@
 /**
- * TOPIC  : The Preprocessor — What happens before compilation
- * CHAPTER: 2.10 — Introduction to the preprocessor
+ * TOPIC  : The Preprocessor, What happens before compilation
+ * CHAPTER: 2.10, Introduction to the preprocessor
  * SOURCE : https://learncpp.com/cpp-tutorial/introduction-to-the-preprocessor/
  *
  * KEY INSIGHT: The preprocessor is NOT part of the C++ compiler.
  *              It is a separate text-substitution pass that runs BEFORE
  *              the compiler ever sees your code. It knows nothing about
- *              C++ types, scope, or semantics — it is pure text manipulation.
+ *              C++ types, scope, or semantics, it is pure text manipulation.
  *              This explains why macros are so dangerous (see macros_conditional.cpp).
  */
  
@@ -31,18 +31,18 @@
 //       ↓
 //   Executable (.exe / no extension)
 //
-// The preprocessor's output is never written to disk (usually) — it's
+// The preprocessor's output is never written to disk (usually), it's
 // piped directly into the compiler. But you can see it with:
 //   g++ -E yourfile.cpp   (outputs the preprocessed translation unit)
  
  
 // ── WHAT THE PREPROCESSOR DOES ───────────────────────────────────────────────
 //
-// It scans the file TOP TO BOTTOM looking for "preprocessor directives" —
+// It scans the file TOP TO BOTTOM looking for "preprocessor directives",
 // lines that start with # and end at the NEWLINE (not semicolon).
 //
 // Directives are NOT C++ statements:
-//   ✅ #include <iostream>   ← no semicolon — it is a directive
+//   ✅ #include <iostream>   ← no semicolon, it is a directive
 //   ❌ #include <iostream>;  ← the semicolon is wrong (though some compilers ignore it)
 //
 // The preprocessor handles three main things:
@@ -66,7 +66,7 @@
 //
 //   AFTER preprocessing (what the compiler actually sees):
 //   ┌──────────────────────────────────────────────────────────────────────────┐
-//   │ [entire contents of <iostream> pasted here — thousands of lines]        │
+//   │ [entire contents of <iostream> pasted here, thousands of lines]        │
 //   │ int main() {                                                             │
 //   │     std::cout << "Hello\n";                                              │
 //   │ }                                                                        │
@@ -75,7 +75,7 @@
 // std::cout is declared inside <iostream>. After the #include substitution,
 // its declaration is present in your translation unit, so the compiler accepts it.
 //
-// The #include is recursive — if iostream itself includes other headers,
+// The #include is recursive, if iostream itself includes other headers,
 // those are also expanded inline.
  
  
@@ -97,7 +97,7 @@
 //
 //   #define VALUE 42      // active from here to the end of the file
 //   int foo() { ... }     // VALUE = 42 here
-//   int bar() { ... }     // VALUE = 42 here too — no way to limit scope
+//   int bar() { ... }     // VALUE = 42 here too, no way to limit scope
  
  
 int main()

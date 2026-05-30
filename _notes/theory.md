@@ -1,4 +1,4 @@
-# Theory Notes — Cross-Chapter Insights
+# Theory Notes, Cross-Chapter Insights
 
 > Things that don't belong to one chapter. The meta-knowledge of C++.
 > Every entry here was earned by noticing something, not just reading it.
@@ -12,7 +12,7 @@ The compiler sometimes reports an error on the line *after* the actual problem.
 If the flagged line looks fine, check the line above it.
 
 ```cpp
-int x = 5     // ← missing semicolon — compiler reports error on NEXT line
+int x = 5     // ← missing semicolon, compiler reports error on NEXT line
 int y = 10;   // ← compiler says error is HERE
 ```
 
@@ -31,8 +31,8 @@ of other `.cpp` files during compilation. This is why:
 Both are valid. Pick one per project and never mix them.
 
 ```cpp
-int player_health;   // snake_case — common in C standard library style
-int playerHealth;    // camelCase — common in OOP/Java style
+int player_health;   // snake_case, common in C standard library style
+int playerHealth;    // camelCase, common in OOP/Java style
 
 // In C++, the standard library uses snake_case:
 std::string my_string;
@@ -40,7 +40,7 @@ std::vector<int> item_list;
 ```
 
 ### What NOT to name things
-- Don't start identifiers with `_` — reserved for compiler/standard library use
+- Don't start identifiers with `_`, reserved for compiler/standard library use
 - Don't use all-caps except for macros (and even then, prefer `constexpr`)
 - Don't use single letters except for loop counters and template parameters
 
@@ -69,12 +69,12 @@ They don't understand types. They don't respect scope.
 
 ### Long lines: break at the operator, put it at the START of the next line
 ```cpp
-// CORRECT — operator leads the continuation line
+// CORRECT, operator leads the continuation line
 std::cout << 3 + 4
     + 5 + 6
     * 7 * 8;
 
-// AVOID — operator at end makes it easy to miss
+// AVOID, operator at end makes it easy to miss
 std::cout << 3 + 4 +
     5 + 6 *
     7 * 8;
@@ -91,7 +91,7 @@ std::cout << a << b << c;   // outputs a, returns cout, outputs b, etc.
 
 ---
 
-## Literals vs Variables — The Memory Distinction
+## Literals vs Variables, The Memory Distinction
 
 ```
 Literal → value baked directly into the executable binary
@@ -115,7 +115,7 @@ This is why literals are "compile-time constants" and variables are "runtime val
 
 ---
 
-## Multi-line Comments — The One Rule
+## Multi-line Comments, The One Rule
 
 Never nest multi-line comments inside multi-line comments.
 But nesting single-line comments inside multi-line is fine.
@@ -127,7 +127,7 @@ But nesting single-line comments inside multi-line is fine.
 */
 
 /* This BREAKS:
-   /* nested multi-line — the first */ ends here, rest is code */
+   /* nested multi-line, the first */ ends here, rest is code */
 ```
 
 ---

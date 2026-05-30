@@ -1,9 +1,9 @@
 /**
- * TOPIC  : Variable Initialization — All 5 Forms + Narrowing Rules
- * CHAPTER: 1.4 — Variable assignment and initialization
+ * TOPIC  : Variable Initialization, All 5 Forms + Narrowing Rules
+ * CHAPTER: 1.4, Variable assignment and initialization
  * SOURCE : https://learncpp.com/cpp-tutorial/variable-assignment-and-initialization/
  *
- * KEY INSIGHT: How you initialize a variable isn't just style — it changes
+ * KEY INSIGHT: How you initialize a variable isn't just style, it changes
  *              what the compiler will and won't allow. List-initialization {}
  *              is strictly superior for most cases because it catches
  *              narrowing conversions that the other forms silently swallow.
@@ -22,10 +22,10 @@ int e {};       // value-initialization    → empty braces, always initializes 
 
 // ── PART 2: The Narrowing Conversion Difference ───────────────────────────
 //
-// A narrowing conversion loses information — like fitting 4.5 into an int.
+// A narrowing conversion loses information, like fitting 4.5 into an int.
 // The three forms handle this very differently:
 
-// int w1 { 4.5 };  // ❌ COMPILE ERROR — list-init REFUSES narrowing conversions
+// int w1 { 4.5 };  // ❌ COMPILE ERROR, list-init REFUSES narrowing conversions
 // int w2 = 4.5;    // ✅ compiles, but w2 = 4 (fractional part silently lost)
 // int w3 (4.5);    // ✅ compiles, but w3 = 4 (fractional part silently lost)
 
@@ -49,7 +49,7 @@ int e {};       // value-initialization    → empty braces, always initializes 
 int width { 5 };       // direct-list-initialization (PREFERRED)
 int height = { 6 };    // copy-list-initialization (rarely needed, just use the above)
 
-// Both are "list initialization" — both catch narrowing conversions.
+// Both are "list initialization", both catch narrowing conversions.
 // The direct form (without =) is universally preferred.
 
 
@@ -82,7 +82,7 @@ int main()
     // THE RULE TO FOLLOW:
     // For new code, use direct-list-initialization {} for everything.
     // Exception: when you intentionally want copy or direct init semantics
-    // (rare in practice — you'll know when you need it).
+    // (rare in practice, you'll know when you need it).
 
     int x {};           // value-initialized to 0
     int y { 42 };       // direct-list-initialized to 42
