@@ -48,7 +48,7 @@ This is not a collection of random C++ snippets. This is a **structured, annotat
 
 > The README.md of each chapter contains the summary of whole chapter
 
-```
+
 cpp-mastery/
 │
 ├── 📄 [README.md](README.md)                   ← You are here
@@ -64,103 +64,103 @@ cpp-mastery/
 │   ├── 📄 [io_buffering.cpp](01_basics/io_buffering.cpp)        ← cout, cin, endl vs \n, buffer mechanics
 │   ├── 📄 [variables_init.cpp](01_basics/variables_init.cpp)      ← All 5 init forms + narrowing rules
 │
-├── 📁 02_functions/               ← Ch.2: Functions, scope, preprocessor
+├── 📁 [02_functions](02_functions)/               ← Ch.2: Functions, scope, preprocessor
 │   ├── 📄 [README.md](02_functions/README.md)
-│   ├── 📄 func_basics.cpp         ← main(), status codes, return rules
-│   ├── 📄 void_functions.cpp      ← Non-value-returning functions
-│   ├── 📄 local_scope.cpp         ← Lifetime, scope, destruction order
-│   ├── 📄 forward_declaration.cpp ← Declarations vs definitions
-│   ├── 📄 preprocessor.cpp        ← Preprocessing phase deep dive
-│   ├── 📄 macros_conditional.cpp  ← Object/function macros, #ifdef, #if 0
-│   ├── 📄 header_files.cpp        ← Include mechanics, best practices
-│   └── 📄 header_guards.cpp       ← Include guard pattern
+│   ├── 📄 [func_basics.cpp](02_functions/funcBasic.cpp)         ← main(), status codes, return rules
+│   ├── 📄 [void_functions.cpp](02_functions/void_functions.cpp)      ← Non-value-returning functions
+│   ├── 📄 [local_scope.cpp](02_functions/local_scope.cpp)         ← Lifetime, scope, destruction order
+│   ├── 📄 [forward_declaration.cpp](02_functions/forward_declaration.cpp) ← Declarations vs definitions
+│   ├── 📄 [preprocessor.cpp](02_functions/preprocessor.cpp)        ← Preprocessing phase deep dive
+│   ├── 📄 [macros_conditional.cpp](02_functions/macros_conditional.cpp)  ← Object/function macros, #ifdef, #if 0
+│   ├── 📄 [header_files.cpp](02_functions/header_files.cpp)        ← Include mechanics, best practices
+│   └── 📄 [header_guards.cpp](02_functions/header_guards.cpp)       ← Include guard pattern
 │
-├── 📁 03_debugging/               ← Ch.3: Debugging mindset & tools
+├── 📁 [03_debugging](03_debugging)/               ← Ch.3: Debugging mindset & tools
 │   ├── 📄 [README.md](03_debugging/README.md)
 │
-├── 📁 04_data_types/              ← Ch.4: Fundamental types
+├── 📁 [04_data_types](04_data_types)/              ← Ch.4: Fundamental types
 │   └── 📄 [README.md](04_data_types/README.md)
 │
-├── 📁 05_constants_strings/       ← Ch.5: Constants, strings
+├── 📁 [05_constants_strings](05_constants_strings)/       ← Ch.5: Constants, strings
 │   └── 📄 [README.md](05_constants/README.md)
 │
-├── 📁 06_operators/               ← Ch.6: Operators & expressions
+├── 📁 [06_operators](06_operators)/               ← Ch.6: Operators & expressions
 │   └── 📄 [README.md](06_operators/README.md)
 │
-├── 📁 07_scope_linkage/           ← Ch.7: Scope, duration, linkage
+├── 📁 [07_scope_linkage](07_scope_linkage)/           ← Ch.7: Scope, duration, linkage
 │   └── 📄 [README.md](07_scope_linkage/README.md)
 │
-├── 📁 08_control_flow/            ← Ch.8: if/switch/loops/random
+├── 📁 [08_control_flow](08_control_flow)/            ← Ch.8: if/switch/loops/random
 │   └── 📄 [README.md](08_control_flow/README.md)
 │
-├── 📁 09_error_handling/          ← Ch.9: Testing, assert, cin validation
+├── 📁 [09_error_handling](09_error_handling)/          ← Ch.9: Testing, assert, cin validation
 │   └── 📄 [README.md](09_error_handling/README.md)
 │
-├── 📁 10_type_system/             ← Ch.10: Conversions, auto, aliases
+├── 📁 [10_type_system](10_type_system)/             ← Ch.10: Conversions, auto, aliases
 │   └── 📄 [README.md](10_type_system/README.md)
 │
-├── 📁 11_templates/               ← Ch.11: Overloading + function templates
+├── 📁 [11_templates](11_templates)/               ← Ch.11: Overloading + function templates
 │   └── 📄 [README.md](11_templates/README.md)
 │
-├── 📁 12_references_pointers/     ← Ch.12: References, pointers, const
+├── 📁 [12_references_pointers](12_references_pointers)/     ← Ch.12: References, pointers, const
 │   └── 📄 [README.md](12_references_pointers/README.md)
 │
-├── 📁 13_enums_structs/           ← Ch.13: Enums, structs, class templates
+├── 📁 [13_enums_structs](13_enums_structs)/           ← Ch.13: Enums, structs, class templates
 │   └── 📄 [README.md](13_enums_structs/README.md)
 │
-├── 📁 14_classes/                 ← Ch.14: OOP - constructors, access
+├── 📁 [14_classes](14_classes)/                 ← Ch.14: OOP - constructors, access
 │   └── 📄 [README.md](14_classes/README.md)
 │
-├── 📁 15_more_classes/            ← Ch.15: this, static, friends, destructors
+├── 📁 [15_more_classes](15_more_classes)/            ← Ch.15: this, static, friends, destructors
 │   └── 📄 [README.md](15_more_classes/README.md)
 │
-├── 📁 16_vectors/                 ← Ch.16: std::vector, dynamic arrays
+├── 📁 [16_vectors](16_vectors)/                 ← Ch.16: std::vector, dynamic arrays
 │   └── 📄 [README.md](16_vectors/README.md)
 │
-├── 📁 17_arrays/                  ← Ch.17: std::array, C-style arrays
+├── 📁 [17_arrays](17_arrays)/                  ← Ch.17: std::array, C-style arrays
 │   └── 📄 [README.md](17_arrays/README.md)
 │
-├── 📁 18_iterators_algorithms/    ← Ch.18: STL iterators & algorithms
+├── 📁 [18_iterators_algorithms](18_iterators_algorithms)/    ← Ch.18: STL iterators & algorithms
 │   └── 📄 [README.md](18_iterators_algorithms/README.md)
 │
-├── 📁 19_dynamic_allocation/      ← Ch.19: new, delete, heap
+├── 📁 [19_dynamic_allocation](19_dynamic_allocation)/      ← Ch.19: new, delete, heap
 │   └── 📄 [README.md](19_dynamic_allocation/README.md)
 │
-├── 📁 20_advanced_functions/      ← Ch.20: Lambdas, recursion, stack/heap
+├── 📁 [20_advanced_functions](20_advanced_functions)/      ← Ch.20: Lambdas, recursion, stack/heap
 │   └── 📄 [README.md](20_adcanced_functions/README.md)
 │
-├── 📁 21_operator_overloading/    ← Ch.21: Operator overloading
+├── 📁 [21_operator_overloading](21_operator_overloading)/    ← Ch.21: Operator overloading
 │   └── 📄 [README.md](21_operator_overloading/README.md)
 │
-├── 📁 22_smart_pointers/          ← Ch.22: unique_ptr, shared_ptr, move
+├── 📁 [22_smart_pointers](22_smart_pointers)/          ← Ch.22: unique_ptr, shared_ptr, move
 │   └── 📄 [README.md](22_smart_pointers/README.md)
 │
-├── 📁 23_object_relationships/    ← Ch.23: Composition, aggregation
+├── 📁 [23_object_relationships](23_object_relationships)/    ← Ch.23: Composition, aggregation
 │   └── 📄 [README.md](23_object_relationships/README.md)
 │
-├── 📁 24_inheritance/             ← Ch.24: Inheritance in C++
+├── 📁 [24_inheritance](24_inheritance)/             ← Ch.24: Inheritance in C++
 │   └── 📄 [README.md](24_inheritance/README.md)
 │
-├── 📁 25_virtual_functions/       ← Ch.25: Polymorphism, vtables, casting
+├── 📁 [25_virtual_functions](25_virtual_functions)/       ← Ch.25: Polymorphism, vtables, casting
 │   └── 📄 [README.md](25_virtual_functions/README.md)
 │
-├── 📁 26_templates_classes/       ← Ch.26: Template specialization
+├── 📁 [26_templates_classes](26_templates_classes)/       ← Ch.26: Template specialization
 │   └── 📄 [README.md](26_templates_classes/README.md)
 │
-├── 📁 27_exceptions/              ← Ch.27: Exception handling
+├── 📁 [27_exceptions](27_exceptions)/              ← Ch.27: Exception handling
 │   └── 📄 [README.md](27_exceptions/README.md)
 │
-├── 📁 28_io_streams/              ← Ch.28: File I/O, stream states
+├── 📁 [28_io_streams](28_io_streams)/              ← Ch.28: File I/O, stream states
 │   └── 📄 [README.md](28_io_streams/README.md)
 │
-├── 📁 _notes/                     ← Cross-chapter theory & mental models
-│   ├── 📄 theory.md               ← Compiler wisdom, formatting rules
-│   ├── 📄 cpp_gotchas.md          ← Traps, UB, and things that surprise
-│   └── 📄 mental_models.md        ← How to *think* in C++
+├── 📁 [_notes](_notes)/                     ← Cross-chapter theory & mental models
+│   ├── 📄 [theory.md](_notes/theory.md)               ← Compiler wisdom, formatting rules
+│   ├── 📄 [cpp_gotchas.md](_notes/cpp_gotchas.md)          ← Traps, UB, and things that surprise
+│   └── 📄 [mental_models.md](_notes/mental_models.md)        ← How to *think* in C++
 │
-└── 📁 _sandbox/                   ← Scratch space, not graded
-    └── 📄 test.cpp
-```
+└── 📁 [_sandbox](_sandbox)/                   ← Scratch space, not graded
+    └── 📄 [test.cpp](_sandbox/test.cpp)
+
 
 ---
 
