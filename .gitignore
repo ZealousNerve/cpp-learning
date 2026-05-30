@@ -35,5 +35,5 @@ Thumbs.db
 _sandbox/*.exe
 
 # few extra files
-ROADMAP.md
-CHANGELOG.md
+/ROADMAP.md
+/CHANGELOG.md
