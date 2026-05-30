@@ -25,7 +25,6 @@
 
 > *"The expert in anything was once a beginner who refused to give up."*
 > 
-> **IIIT Bhopal → Building IIT Bombay-level skills, one commit at a time.**
 
 </div>
 
