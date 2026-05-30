@@ -47,11 +47,9 @@ This is not a collection of random C++ snippets. This is a **structured, annotat
 ## ◈ Repository Architecture
 
 ```
-cpp-mastery/
+cpp-learning/
 │
 ├── 📄 README.md                   ← You are here
-├── 📄 ROADMAP.md                  ← Full LearnCpp.com chapter tracker
-├── 📄 CHANGELOG.md                ← Milestone log of the learning journey
 ├── 📄 .gitignore                  ← Excludes .exe, .obj, IDE noise
 │
 ├── 📁 00_foundations/             ← Ch.0: Toolchain & environment setup
@@ -206,34 +204,34 @@ cpp-mastery/
 
 > Summary of Each Chapter
 
-1. [Ch.1, C++ Basics](01_basics/README.md)
-2. [Ch.2, Functions](02_functions/README.md)
-3. [Ch.3, Debugging](03_debugging/README.md)
-4. [Ch.4, DataTypes](04_data_types/README.md)
-5. [Ch.5, Constants Strings](05_constants_strings/README.md)
-6. [Ch.6, Operators](06_operators/README.md)
-7. [Ch.7, Scope Linkage](07_scope_linkage/README.md)
-8. [Ch.8, Control Flow](08_control_flow/README.md)
-9. [Ch.9, Error Handling](09_error_handling/README.md)
-10. [Ch.10, Type System](10_type_system/README.md)
-11. [Ch.11, Templates](11_templates/README.md)
-12. [Ch.12, Refrence Pointers](12_references_pointers/README.md)
-13. [Ch.13, Enums, Struct](13_enums_structs/README.md)
-14. [Ch.14, Classes](14_classes/README.md)
-15. [Ch.15, More Classes](15_more_classes/README.md)
-16. [Ch.16, Vectors](16_vectors/README.md)
-17. [Ch.17, Arrays](17_arrays/README.md)
-18. [Ch.18, Iterators Algorithm](18_iterators_algorithms/README.md)
-19. [Ch.19, Dynamic Allocation](19_dynamic_allocation/README.md)
-20. [Ch.20, Advanced Functions](20_advanced_functions/README.md)
-21. [Ch.21, Operator Overloading](21_operator_overloading/README.md)
-22. [Ch.21, Smart Pointers](22_smart_pointers/README.md)
-23. [Ch.23, Object Relationship](23_object_relationships/README.md)
-24. [Ch.24, Inheritance](24_inheritance/README.md)
-25. [Ch.25, Virtual Functions](25_virtual_functions/README.md)
-26. [Ch.26, Templates Classes](26_templates_classes/README.md)
-27. [Ch.27, Exceptions](27_exceptions/README.md)
-28. [Ch.28, IO Streams](28_io_streams/README.md)
+1. [C++ Basics](01_basics/README.md)
+2. [Functions](02_functions/README.md)
+3. [Debugging](03_debugging/README.md)
+4. [DataTypes](04_data_types/README.md)
+5. [Constants Strings](05_constants_strings/README.md)
+6. [Operators](06_operators/README.md)
+7. [Scope Linkage](07_scope_linkage/README.md)
+8. [Control Flow](08_control_flow/README.md)
+9. [Error Handling](09_error_handling/README.md)
+10. [Type System](10_type_system/README.md)
+11. [Templates](11_templates/README.md)
+12. [Refrence Pointers](12_references_pointers/README.md)
+13. [Enums, Struct](13_enums_structs/README.md)
+14. [Classes](14_classes/README.md)
+15. [More Classes](15_more_classes/README.md)
+16. [Vectors](16_vectors/README.md)
+17. [Arrays](17_arrays/README.md)
+18. [Iterators Algorithm](18_iterators_algorithms/README.md)
+19. [Dynamic Allocation](19_dynamic_allocation/README.md)
+20. [Advanced Functions](20_advanced_functions/README.md)
+21. [Operator Overloading](21_operator_overloading/README.md)
+22. [Smart Pointers](22_smart_pointers/README.md)
+23. [Object Relationship](23_object_relationships/README.md)
+24. [Inheritance](24_inheritance/README.md)
+25. [Virtual Functions](25_virtual_functions/README.md)
+26. [Templates Classes](26_templates_classes/README.md)
+27. [Exceptions](27_exceptions/README.md)
+28. [IO Streams](28_io_streams/README.md)
 
 
 <!-- instead of dropdown i chose above formmating
