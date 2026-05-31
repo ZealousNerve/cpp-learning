@@ -1,10 +1,13 @@
 #include <iostream>
-using namespace std;
 
-int main(){
-    int x{};
-    cout << "Enter a number: ";
-    cin >> x;
-    cout << x; 
+void printValue(int value)
+{
+    std::cout << value << '\n';
+}
+
+int main()
+{
+    printValue(5);
+
     return 0;
 }

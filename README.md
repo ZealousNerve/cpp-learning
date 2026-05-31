@@ -168,35 +168,35 @@ cpp-learning/
 
 | Chapter | Topic | Status | Files |
 |:-------:|-------|:------:|:-----:|
-| Ch.0 | Introduction & Setup | `✅ Done` | 2 |
-| Ch.1 | C++ Basics | `✅ Done` | 3 |
+| Ch.0 | Introduction & Setup | `✅ Done` | 0 |
+| Ch.1 | C++ Basics | `✅ Done` | 2 |
 | Ch.2 | Functions & Files | `✅ Done` | 8 |
-| Ch.3 | Debugging | `🔄 In Progress` | 0 |
-| Ch.4 | Fundamental Data Types | `⬜ Upcoming` |, |
-| Ch.5 | Constants & Strings | `⬜ Upcoming` |, |
-| Ch.6 | Operators | `⬜ Upcoming` |, |
-| Ch.7 | Scope, Duration, Linkage | `⬜ Upcoming` |, |
-| Ch.8 | Control Flow | `⬜ Upcoming` |, |
-| Ch.9 | Error Detection & Handling | `⬜ Upcoming` |, |
-| Ch.10 | Type Conversion & Deduction | `⬜ Upcoming` |, |
-| Ch.11 | Function Overloading & Templates | `⬜ Upcoming` |, |
-| Ch.12 | References & Pointers | `⬜ Upcoming` |, |
-| Ch.13 | Enums & Structs | `⬜ Upcoming` |, |
-| Ch.14 | Introduction to Classes | `⬜ Upcoming` |, |
-| Ch.15 | More on Classes | `⬜ Upcoming` |, |
-| Ch.16 | Dynamic Arrays: `std::vector` | `⬜ Upcoming` |, |
-| Ch.17 | Fixed Arrays: `std::array` | `⬜ Upcoming` |, |
-| Ch.18 | Iterators & Algorithms | `⬜ Upcoming` |, |
-| Ch.19 | Dynamic Allocation | `⬜ Upcoming` |, |
-| Ch.20 | Advanced Functions & Lambdas | `⬜ Upcoming` |, |
-| Ch.21 | Operator Overloading | `⬜ Upcoming` |, |
-| Ch.22 | Smart Pointers & Move Semantics | `⬜ Upcoming` |, |
-| Ch.23 | Object Relationships | `⬜ Upcoming` |, |
-| Ch.24 | Inheritance | `⬜ Upcoming` |, |
-| Ch.25 | Virtual Functions & Polymorphism | `⬜ Upcoming` |, |
-| Ch.26 | Templates & Classes | `⬜ Upcoming` |, |
-| Ch.27 | Exceptions | `⬜ Upcoming` |, |
-| Ch.28 | Input & Output Streams | `⬜ Upcoming` |, |
+| Ch.3 | Debugging | `✅ Done` | 2 |
+| Ch.4 | Fundamental Data Types | `⬜ Upcoming` | 0 |
+| Ch.5 | Constants & Strings | `⬜ Upcoming` | 0 |
+| Ch.6 | Operators | `⬜ Upcoming` | 0 |
+| Ch.7 | Scope, Duration, Linkage | `⬜ Upcoming` | 0 |
+| Ch.8 | Control Flow | `⬜ Upcoming` | 0 |
+| Ch.9 | Error Detection & Handling | `⬜ Upcoming` | 0 |
+| Ch.10 | Type Conversion & Deduction | `⬜ Upcoming` | 0 |
+| Ch.11 | Function Overloading & Templates | `⬜ Upcoming` | 0 |
+| Ch.12 | References & Pointers | `⬜ Upcoming` | 0 |
+| Ch.13 | Enums & Structs | `⬜ Upcoming` | 0 |
+| Ch.14 | Introduction to Classes | `⬜ Upcoming` | 0 |
+| Ch.15 | More on Classes | `⬜ Upcoming` | 0 |
+| Ch.16 | Dynamic Arrays: `std::vector` | `⬜ Upcoming` | 0 |
+| Ch.17 | Fixed Arrays: `std::array` | `⬜ Upcoming` | 0 |
+| Ch.18 | Iterators & Algorithms | `⬜ Upcoming` | 0 |
+| Ch.19 | Dynamic Allocation | `⬜ Upcoming` | 0 |
+| Ch.20 | Advanced Functions & Lambdas | `⬜ Upcoming` | 0 |
+| Ch.21 | Operator Overloading | `⬜ Upcoming` | 0 |
+| Ch.22 | Smart Pointers & Move Semantics | `⬜ Upcoming` | 0 |
+| Ch.23 | Object Relationships | `⬜ Upcoming` | 0 |
+| Ch.24 | Inheritance | `⬜ Upcoming` | 0 |
+| Ch.25 | Virtual Functions & Polymorphism | `⬜ Upcoming` | 0 |
+| Ch.26 | Templates & Classes | `⬜ Upcoming` | 0 |
+| Ch.27 | Exceptions | `⬜ Upcoming` | 0 |
+| Ch.28 | Input & Output Streams | `⬜ Upcoming` | 0 |
 
 ---
 

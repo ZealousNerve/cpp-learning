@@ -131,5 +131,14 @@ But nesting single-line comments inside multi-line is fine.
 ```
 
 ---
+## Extras:
+This process of making structural changes to your code without changing its behavior is called refactoring. 
+The goal of refactoring is to make your program less complex by increasing its organization and modularity.
 
+So how long is too long for a function? A function that takes up one vertical screen worth of code is generally 
+regarded as too long -- if you have to scroll to read the whole function, the function’s comprehensibility drops significantly. 
+Ideally, a function should be less than ten lines. Functions that are less than five lines are even better.
+
+
+````
 *Add to this file whenever something clicks that belongs to no single chapter.*
