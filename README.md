@@ -43,7 +43,7 @@ This is not a collection of random C++ snippets. This is a **structured, annotat
 - If it feels obvious, it doesn't get committed.
 
 ---
-
+<!-- REPO_TREE_START -->
 ## ◈ Repository Architecture
 
 ```
@@ -75,6 +75,8 @@ cpp-learning/
 │
 ├── 📁 03_debugging/               ← Ch.3: Debugging mindset & tools
 │   ├── 📄 README.md
+│   ├── 📄 debugging_strategy.cpp        ← Include strategy, ::cerr
+│   └── 📄 Integrated_debugger.cpp       ← Include different debugging steps
 │
 ├── 📁 04_data_types/              ← Ch.4: Fundamental types
 │   └── 📄 README.md
@@ -159,8 +161,8 @@ cpp-learning/
 └── 📁 _sandbox/                   ← Scratch space, not graded
     └── 📄 test.cpp
 ```
-
 ---
+<!-- REPO_TREE_END -->
 
 ## ◈ Progress Tracker
 
@@ -234,104 +236,6 @@ cpp-learning/
 28. [IO Streams](28_io_streams/README.md)
 
 
-<!-- instead of dropdown i chose above formmating
- <details>
-<summary><strong>Ch.1, C++ Basics</strong></summary>
-
-```cpp
-// ❌ What most beginners do
-int x;          // undefined value, could be 0, could be garbage
-
-// ✅ What C++17 best practice says
-int x {};       // value-initialization, always 0 for ints
-
-// 🔥 The trap nobody warns you about
-int w1 { 4.5 }; // COMPILE ERROR, list-init catches narrowing conversions
-int w2 = 4.5;   // silently loses .5, no warning by default
-```
-
-**The endl vs \\n trap:** `std::endl` flushes the output buffer every single call.
-In a loop printing 10,000 lines, that's 10,000 unnecessary disk/console flushes.
-Use `'\n'` everywhere except when you explicitly need a flush.
-
-**cin's input buffer mechanics:** When you type `5a` and hit enter, `5\n a\n` goes into the buffer.
-`cin >> x` extracts `5`, leaves `a\n` in the buffer. Your next `cin` call reads `a` immediately
-without waiting for the user. This is the root of most beginner input bugs.
-
-</details>
-
-<details>
-<summary><strong>Ch.2, Functions & Files</strong></summary>
-
-```cpp
-// The thing about main() most people miss:
-// Global variables are initialized BEFORE main() runs.
-// If a global's initializer calls a function, that function
-// runs before main(). main() is NOT always first.
-
-// Status codes, use the portable way:
-#include <cstdlib>
-return EXIT_SUCCESS; // more expressive than return 0;
-return EXIT_FAILURE; // the only meaningful non-zero value
-
-// Forward declarations enable circular dependency resolution:
-int foo(int);  // tell the compiler foo exists
-int bar(int x) { return foo(x + 1); }  // can use foo now
-int foo(int x) { return x * 2; }       // defined later
-```
-
-**The preprocessor is not C++.** It runs as a pure text-substitution pass
-before any C++ parsing. `#define`, `#include`, `#ifdef`, none of these
-are C++ statements. They have no semicolons. They don't understand types.
-Macros don't respect scope. This is why `constexpr` exists to replace `#define`.
-
-**Header files only declare, never define (usually).** Putting a function
-*definition* in a header causes "multiple definition" linker errors when
-two `.cpp` files include that header. Declarations are fine to include
-multiple times, that's exactly what header guards protect against.
-
-</details> -->
-
----
-
-## ◈ The File Format Convention
-
-Every `.cpp` file in this repo follows the same structure, making them scannable:
-
-```cpp
-/**
- * TOPIC : Local Scope & Variable Lifetime
- * CHAPTER: 2.5, Introduction to local scope
- * SOURCE : https://learncpp.com/cpp-tutorial/introduction-to-local-scope/
- *
- * KEY INSIGHT: Local variables are created at their point of definition
- *              and destroyed in reverse order when they go out of scope.
- *              Destruction order matters, it's LIFO, not FIFO.
- */
-
-// ── CONCEPT 1: Scope vs Lifetime ──────────────────────────────────────────
-// Scope = where an identifier can be *seen* (compile-time property)
-// Lifetime = when an object *exists* in memory (runtime property)
-// They're related but NOT the same thing.
-
-#include <iostream>
-
-int add(int x, int y)   // x, y created here
-{
-    return x + y;
-}   // y destroyed first, then x, reverse order
-
-int main()
-{
-    int a { 5 };        // created, enters scope
-    int b { 6 };        // created, enters scope
-
-    std::cout << add(a, b) << '\n';
-
-    return 0;
-}   // b destroyed first, then a, reverse declaration order
-    // Best practice: define variables close to first use
-```
 
 ---
 
@@ -373,28 +277,6 @@ and a completely different mental model around memory.
 
 This repo is my commitment: to spend this summer going deep on C++ the *right* way,
 not surface-level syntax familiarity, but genuine understanding of what the machine is doing.
-
-
----
-
-## ◈ Roadmap Beyond This Repo
-
-Once this repo is complete (all 28 chapters committed), the plan is:
-
-```
-C++ Mastery (this repo)
-        │
-        ▼
-Data Structures & Algorithms in C++
-        │
-        ├──► Competitive Programming (Codeforces)
-        │
-        └──► Systems / Security Projects
-                    │
-                    ├── Network scanner (libpcap)
-                    ├── Custom memory allocator
-                    └── Toy OS kernel (semester 5-6)
-```
 
 ---
 
