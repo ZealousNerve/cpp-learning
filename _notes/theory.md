@@ -139,6 +139,16 @@ So how long is too long for a function? A function that takes up one vertical sc
 regarded as too long -- if you have to scroll to read the whole function, the function’s comprehensibility drops significantly. 
 Ideally, a function should be less than ten lines. Functions that are less than five lines are even better.
 
+---
+std::cout << "The value of x is: " << x << '\n'; // standalone \n goes in single quotes <br>
+std::cout << "First line\nSecond line\n";        // \n can be embedded in double quotes
+
+
+---
+Whenever you see C++ syntax (excluding the preprocessor) that makes use of angled brackets (<>), 
+the thing between the angled brackets will most likely be a type. This is typically how C++ deals with code 
+that need a parameterized type.
+---
 
 ````
 *Add to this file whenever something clicks that belongs to no single chapter.*

@@ -44,124 +44,87 @@ This is not a collection of random C++ snippets. This is a **structured, annotat
 
 ---
 <!-- REPO_TREE_START -->
-## ◈ Repository Architecture
-
 ```
 cpp-learning/
-│
-├── 📄 README.md                   ← You are here
-├── 📄 .gitignore                  ← Excludes .exe, .obj, IDE noise
-│
-├── 📁 00_foundations/             ← Ch.0: Toolchain & environment setup
-│   ├── 📄 README.md
-│   ├── 📄 compiler_notes.md       ← Compiler flags, warnings, standards
-│   └── 📄 dev_environment.md      ← CLion + MinGW + WSL2 setup notes
-│
-├── 📁 01_basics/                  ← Ch.1: Statements, variables, I/O
-│   ├── 📄 README.md
-│   ├── 📄 io_buffering.cpp        ← cout, cin, endl vs \n, buffer mechanics
-│   ├── 📄 variables_init.cpp      ← All 5 init forms + narrowing rules
-│
-├── 📁 02_functions/               ← Ch.2: Functions, scope, preprocessor
-│   ├── 📄 README.md
-│   ├── 📄 func_basics.cpp         ← main(), status codes, return rules
-│   ├── 📄 void_functions.cpp      ← Non-value-returning functions
-│   ├── 📄 local_scope.cpp         ← Lifetime, scope, destruction order
-│   ├── 📄 forward_declaration.cpp ← Declarations vs definitions
-│   ├── 📄 preprocessor.cpp        ← Preprocessing phase deep dive
-│   ├── 📄 macros_conditional.cpp  ← Object/function macros, #ifdef, #if 0
-│   ├── 📄 header_files.cpp        ← Include mechanics, best practices
-│   └── 📄 header_guards.cpp       ← Include guard pattern
-│
-├── 📁 03_debugging/               ← Ch.3: Debugging mindset & tools
-│   ├── 📄 README.md
-│   ├── 📄 debugging_strategy.cpp        ← Include strategy, ::cerr
-│   └── 📄 Integrated_debugger.cpp       ← Include different debugging steps
-│
-├── 📁 04_data_types/              ← Ch.4: Fundamental types
-│   └── 📄 README.md
-│
-├── 📁 05_constants_strings/       ← Ch.5: Constants, strings
-│   └── 📄 README.md
-│
-├── 📁 06_operators/               ← Ch.6: Operators & expressions
-│   └── 📄 README.md
-│
-├── 📁 07_scope_linkage/           ← Ch.7: Scope, duration, linkage
-│   └── 📄 README.md
-│
-├── 📁 08_control_flow/            ← Ch.8: if/switch/loops/random
-│   └── 📄 README.md
-│
-├── 📁 09_error_handling/          ← Ch.9: Testing, assert, cin validation
-│   └── 📄 README.md
-│
-├── 📁 10_type_system/             ← Ch.10: Conversions, auto, aliases
-│   └── 📄 README.md
-│
-├── 📁 11_templates/               ← Ch.11: Overloading + function templates
-│   └── 📄 README.md
-│
-├── 📁 12_references_pointers/     ← Ch.12: References, pointers, const
-│   └── 📄 README.md
-│
-├── 📁 13_enums_structs/           ← Ch.13: Enums, structs, class templates
-│   └── 📄 README.md
-│
-├── 📁 14_classes/                 ← Ch.14: OOP - constructors, access
-│   └── 📄 README.md
-│
-├── 📁 15_more_classes/            ← Ch.15: this, static, friends, destructors
-│   └── 📄 README.md
-│
-├── 📁 16_vectors/                 ← Ch.16: std::vector, dynamic arrays
-│   └── 📄 README.md
-│
-├── 📁 17_arrays/                  ← Ch.17: std::array, C-style arrays
-│   └── 📄 README.md
-│
-├── 📁 18_iterators_algorithms/    ← Ch.18: STL iterators & algorithms
-│   └── 📄 README.md
-│
-├── 📁 19_dynamic_allocation/      ← Ch.19: new, delete, heap
-│   └── 📄 README.md
-│
-├── 📁 20_advanced_functions/      ← Ch.20: Lambdas, recursion, stack/heap
-│   └── 📄 README.md
-│
-├── 📁 21_operator_overloading/    ← Ch.21: Operator overloading
-│   └── 📄 README.md
-│
-├── 📁 22_smart_pointers/          ← Ch.22: unique_ptr, shared_ptr, move
-│   └── 📄 README.md
-│
-├── 📁 23_object_relationships/    ← Ch.23: Composition, aggregation
-│   └── 📄 README.md
-│
-├── 📁 24_inheritance/             ← Ch.24: Inheritance in C++
-│   └── 📄 README.md
-│
-├── 📁 25_virtual_functions/       ← Ch.25: Polymorphism, vtables, casting
-│   └── 📄 README.md
-│
-├── 📁 26_templates_classes/       ← Ch.26: Template specialization
-│   └── 📄 README.md
-│
-├── 📁 27_exceptions/              ← Ch.27: Exception handling
-│   └── 📄 README.md
-│
-├── 📁 28_io_streams/              ← Ch.28: File I/O, stream states
-│   └── 📄 README.md
-│
-├── 📁 _notes/                     ← Cross-chapter theory & mental models
-│   ├── 📄 theory.md               ← Compiler wisdom, formatting rules
-│   ├── 📄 cpp_gotchas.md          ← Traps, UB, and things that surprise
-│   └── 📄 mental_models.md        ← How to *think* in C++
-│
-└── 📁 _sandbox/                   ← Scratch space, not graded
-    └── 📄 test.cpp
+├── 00_foundations/
+│   └── README.md
+├── 01_basics/
+│   ├── io_buffering.cpp
+│   ├── variables_init.cpp
+│   └── README.md
+├── 02_functions/
+│   ├── forward_declaration.cpp
+│   ├── funcBasic.cpp
+│   ├── header_files.cpp
+│   ├── header_guards.cpp
+│   ├── local_scope.cpp
+│   ├── macros_conditional.cpp
+│   ├── preprocessor.cpp
+│   ├── void_functions.cpp
+│   └── README.md
+├── 03_debugging/
+│   ├── debugging_strategy.cpp
+│   ├── Integrated_debugger.cpp
+│   └── README.md
+├── 04_data_types/
+│   ├── casting.cpp
+│   ├── datatypes.cpp
+│   ├── integers.cpp
+│   ├── notations.cpp
+│   ├── other_datatypes.cpp
+│   └── README.md
+├── 05_constants_strings/
+│   └── README.md
+├── 06_operators/
+│   └── README.md
+├── 07_scope_linkage/
+│   └── README.md
+├── 08_control_flow/
+│   └── README.md
+├── 09_error_handling/
+│   └── README.md
+├── 10_type_system/
+│   └── README.md
+├── 11_templates/
+│   └── README.md
+├── 12_references_pointers/
+│   └── README.md
+├── 13_enums_structs/
+│   └── README.md
+├── 14_classes/
+│   └── README.md
+├── 15_more_classes/
+│   └── README.md
+├── 16_vectors/
+│   └── README.md
+├── 17_arrays/
+│   └── README.md
+├── 18_iterators_algorithms/
+│   └── README.md
+├── 19_dynamic_allocation/
+│   └── README.md
+├── 20_advanced_functions/
+│   └── README.md
+├── 21_operator_overloading/
+│   └── README.md
+├── 22_smart_pointers/
+│   └── README.md
+├── 23_object_relationships/
+│   └── README.md
+├── 24_inheritance/
+│   └── README.md
+├── 25_virtual_functions/
+│   └── README.md
+├── 26_templates_classes/
+│   └── README.md
+├── 27_exceptions/
+│   └── README.md
+├── 28_io_streams/
+│   └── README.md
+├── README.md
+├── flags.json
+└── agent.py
 ```
----
 <!-- REPO_TREE_END -->
 
 ## ◈ Progress Tracker
@@ -174,7 +137,7 @@ cpp-learning/
 | Ch.1 | C++ Basics | `✅ Done` | 2 |
 | Ch.2 | Functions & Files | `✅ Done` | 8 |
 | Ch.3 | Debugging | `✅ Done` | 2 |
-| Ch.4 | Fundamental Data Types | `⬜ Upcoming` | 0 |
+| Ch.4 | Fundamental Data Types | `🔄 In Progress` | 5 |
 | Ch.5 | Constants & Strings | `⬜ Upcoming` | 0 |
 | Ch.6 | Operators | `⬜ Upcoming` | 0 |
 | Ch.7 | Scope, Duration, Linkage | `⬜ Upcoming` | 0 |
