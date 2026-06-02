@@ -137,7 +137,7 @@ cpp-learning/
 | Ch.1 | C++ Basics | `✅ Done` | 2 |
 | Ch.2 | Functions & Files | `✅ Done` | 8 |
 | Ch.3 | Debugging | `✅ Done` | 2 |
-| Ch.4 | Fundamental Data Types | `🔄 In Progress` | 5 |
+| Ch.4 | Fundamental Data Types | `✅ Done` | 5 |
 | Ch.5 | Constants & Strings | `⬜ Upcoming` | 0 |
 | Ch.6 | Operators | `⬜ Upcoming` | 0 |
 | Ch.7 | Scope, Duration, Linkage | `⬜ Upcoming` | 0 |
