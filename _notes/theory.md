@@ -150,5 +150,8 @@ the thing between the angled brackets will most likely be a type. This is typica
 that need a parameterized type.
 ---
 
+With normal functions, we call function(object). With member functions, we call object.function().
+
+---
 ````
 *Add to this file whenever something clicks that belongs to no single chapter.*

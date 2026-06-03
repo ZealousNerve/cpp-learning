@@ -1,4 +1,3 @@
--close
 
 # Chapter: Data Types and Characters
 

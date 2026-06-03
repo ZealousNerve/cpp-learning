@@ -74,6 +74,12 @@ cpp-learning/
 │   ├── other_datatypes.cpp
 │   └── README.md
 ├── 05_constants_strings/
+│   ├── constant_variables.cpp
+│   ├── constexpr.cpp
+│   ├── Literals.cpp
+│   ├── optimization.cpp
+│   ├── strigns.cpp
+│   ├── string_view.cpp
 │   └── README.md
 ├── 06_operators/
 │   └── README.md
@@ -138,7 +144,7 @@ cpp-learning/
 | Ch.2 | Functions & Files | `✅ Done` | 8 |
 | Ch.3 | Debugging | `✅ Done` | 2 |
 | Ch.4 | Fundamental Data Types | `✅ Done` | 5 |
-| Ch.5 | Constants & Strings | `⬜ Upcoming` | 0 |
+| Ch.5 | Constants & Strings | `✅ Done` | 6 |
 | Ch.6 | Operators | `⬜ Upcoming` | 0 |
 | Ch.7 | Scope, Duration, Linkage | `⬜ Upcoming` | 0 |
 | Ch.8 | Control Flow | `⬜ Upcoming` | 0 |
