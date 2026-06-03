@@ -34,5 +34,8 @@ foreach(SOURCE_FILE ${ALL_SOURCES})
     add_executable(${TARGET_NAME} ${SOURCE_FILE}
             05_constants_strings/constexpr.cpp
             05_constants_strings/strigns.cpp
-            05_constants_strings/string_view.cpp)
+            05_constants_strings/string_view.cpp
+            06_operators/precedence_associativity.cpp
+            06_operators/other_operators.cpp
+            06_operators/logical_XOR.cpp)
 endforeach()

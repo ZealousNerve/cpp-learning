@@ -82,6 +82,9 @@ cpp-learning/
 │   ├── string_view.cpp
 │   └── README.md
 ├── 06_operators/
+│   ├── logical_XOR.cpp
+│   ├── other_operators.cpp
+│   ├── precedence_associativity.cpp
 │   └── README.md
 ├── 07_scope_linkage/
 │   └── README.md
@@ -145,7 +148,7 @@ cpp-learning/
 | Ch.3 | Debugging | `✅ Done` | 2 |
 | Ch.4 | Fundamental Data Types | `✅ Done` | 5 |
 | Ch.5 | Constants & Strings | `✅ Done` | 6 |
-| Ch.6 | Operators | `⬜ Upcoming` | 0 |
+| Ch.6 | Operators | `✅ Done` | 3 |
 | Ch.7 | Scope, Duration, Linkage | `⬜ Upcoming` | 0 |
 | Ch.8 | Control Flow | `⬜ Upcoming` | 0 |
 | Ch.9 | Error Detection & Handling | `⬜ Upcoming` | 0 |
