@@ -1,15 +1,3 @@
-/**
- * TOPIC  : Forward Declarations & Definitions
- * CHAPTER: 2.7, Forward declarations and definitions
- * SOURCE : https://learncpp.com/cpp-tutorial/forward-declarations-and-definitions/
- *
- * KEY INSIGHT: The compiler reads files top-to-bottom, one pass only.
- *              A forward declaration tells the compiler "this function exists
- *              and has this signature", enough for it to validate call sites
- *              without yet knowing the implementation.
- *              This is the foundation of how multi-file C++ programs work.
- */
- 
 #include <iostream>
  
  

@@ -1,13 +1,3 @@
-/**
- * TOPIC  : Void Functions, Non-value-returning functions
- * CHAPTER: 2.3, Void functions (non-value returning functions)
- * SOURCE : https://learncpp.com/cpp-tutorial/void-functions-non-value-returning-functions/
- *
- * KEY INSIGHT: void functions exist to perform an action without producing a value.
- *              Trying to use the "result" of a void function in an expression
- *              is a compile error, not runtime behavior. The compiler catches it immediately.
- */
- 
 #include <iostream>
  
  

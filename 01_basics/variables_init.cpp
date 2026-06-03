@@ -1,14 +1,3 @@
-/**
- * TOPIC  : Variable Initialization, All 5 Forms + Narrowing Rules
- * CHAPTER: 1.4, Variable assignment and initialization
- * SOURCE : https://learncpp.com/cpp-tutorial/variable-assignment-and-initialization/
- *
- * KEY INSIGHT: How you initialize a variable isn't just style, it changes
- *              what the compiler will and won't allow. List-initialization {}
- *              is strictly superior for most cases because it catches
- *              narrowing conversions that the other forms silently swallow.
- */
-
 // ── PART 1: The 5 Initialization Forms ────────────────────────────────────
 
 int a;          // default-initialization  → value is INDETERMINATE (undefined behavior to read!)

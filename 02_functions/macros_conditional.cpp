@@ -1,16 +1,3 @@
-/**
- * TOPIC  : Macros & Conditional Compilation
- * CHAPTER: 2.10, Introduction to the preprocessor (macros section)
- * SOURCE : https://learncpp.com/cpp-tutorial/introduction-to-the-preprocessor/
- *
- * KEY INSIGHT: Macros are pure text substitution with ZERO awareness of C++ types,
- *              scope, or semantics. They look like they belong in your code but
- *              they operate in a completely different layer. This is why every
- *              modern C++ feature (constexpr, inline, templates) exists to
- *              replace them. Learn macros to READ legacy code, prefer constexpr
- *              when writing new code.
- */
- 
 #include <iostream>
  
  

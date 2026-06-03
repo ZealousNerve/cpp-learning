@@ -1,13 +1,3 @@
-/**
- * TOPIC  : Function Basics, main(), return values, status codes
- * CHAPTER: 2.1-2.2, Introduction to functions, value-returning functions
- * SOURCE : https://learncpp.com/cpp-tutorial/introduction-to-functions/
- *
- * KEY INSIGHT: main() has two unique rules no other function has.
- *              Understanding what main() actually IS (the OS entry point)
- *              explains why these rules exist.
- */
- 
 #include <cstdlib>   // for EXIT_SUCCESS, EXIT_FAILURE
  
 // ── RULE 1: main() must return int ─────────────────────────────────────────

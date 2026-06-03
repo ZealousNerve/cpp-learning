@@ -1,15 +1,3 @@
-/**
- * TOPIC  : Header Files, Declarations across multiple source files
- * CHAPTER: 2.11, Header files
- * SOURCE : https://learncpp.com/cpp-tutorial/header-files/
- *
- * KEY INSIGHT: Header files solve a specific problem: the compiler processes
- *              each .cpp file in complete isolation. It has zero knowledge of
- *              what other .cpp files contain. Header files are the mechanism
- *              for sharing declarations across files WITHOUT violating the
- *              One Definition Rule.
- */
- 
 #include <iostream>
  
  

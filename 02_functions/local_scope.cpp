@@ -1,14 +1,3 @@
-/**
- * TOPIC  : Local Scope & Variable Lifetime
- * CHAPTER: 2.5, Introduction to local scope
- * SOURCE : https://learncpp.com/cpp-tutorial/introduction-to-local-scope/
- *
- * KEY INSIGHT: Scope and lifetime are different properties.
- *   Scope = WHERE an identifier is visible (compile-time)
- *   Lifetime = WHEN an object exists in memory (runtime)
- *   Variables are destroyed in REVERSE order of creation (LIFO).
- */
- 
 #include <iostream>
  
 // ── Destruction order is LIFO ────────────────────────────────────────────────

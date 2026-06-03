@@ -1,14 +1,3 @@
-/**
- * TOPIC  : I/O Buffering, cout, cin, endl vs '\n'
- * CHAPTER: 1.5, Introduction to iostream: cout, cin, and endl
- * SOURCE : https://learncpp.com/cpp-tutorial/introduction-to-iostream-cout-cin-and-endl/
- *
- * KEY INSIGHT: Output and input in C++ are buffered. Data you write doesn't
- *              immediately go to the console, it goes to an in-memory buffer
- *              first. Understanding this explains why endl is often wasteful
- *              and why cin input bugs are so common.
- */
-
 #include <iostream>
 
 

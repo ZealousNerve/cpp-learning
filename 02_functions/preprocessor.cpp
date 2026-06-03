@@ -1,15 +1,3 @@
-/**
- * TOPIC  : The Preprocessor, What happens before compilation
- * CHAPTER: 2.10, Introduction to the preprocessor
- * SOURCE : https://learncpp.com/cpp-tutorial/introduction-to-the-preprocessor/
- *
- * KEY INSIGHT: The preprocessor is NOT part of the C++ compiler.
- *              It is a separate text-substitution pass that runs BEFORE
- *              the compiler ever sees your code. It knows nothing about
- *              C++ types, scope, or semantics, it is pure text manipulation.
- *              This explains why macros are so dangerous (see macros_conditional.cpp).
- */
- 
 #include <iostream>
  
  
