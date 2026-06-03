@@ -35,9 +35,3 @@ Thumbs.db
 _sandbox/*.exe
 
 # few extra files
-/ROADMAP.md
-/CHANGELOG.md
-/agent.py
-/flags.json
-/index.txt
-/template.cpp

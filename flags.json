@@ -1,0 +1,19 @@
+{
+  "completed": [
+    "00_foundations",
+    "01_basics",
+    "02_functions",
+    "03_debugging",
+    "04_data_types",
+    "05_constants_strings"
+  ],
+  "summarized": [
+    "00_foundations",
+    "01_basics",
+    "02_functions",
+    "03_debugging",
+    "04_data_types",
+    "05_constants_strings"
+  ],
+  "last_run": "2026-06-03T20:44:09.554573"
+}
