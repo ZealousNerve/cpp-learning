@@ -76,7 +76,7 @@ so that’s fine. -1 is not representable, so it wraps around to the top of the 
 
 /*
 if  we assume int to be 32 then it will overflow on older architecture based computers, if we assume 16 bits thinking
-that it will work on both but as we know every time we will create a int on modern architecture than half of the memory
+that it will work on both but as we know every time we will create a int on modern architecture then half of the memory
 will be still unused everytime
 
 size of int is not fixed because in early days of C, the size of int were decided by the compiler, based on the architecture

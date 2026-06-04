@@ -1,108 +1,163 @@
-/*
-A const variable with an integral type and a constant expression initializer can be used in a constant expression.
-All other const variables cannot be used in constant expressions. but just using const keyword not sure that it can be
-used in the constant expression or not, there are certain challenges:
-
-as you can see in examples given below,
- */
-
-int a { 5 };       // not const at all
-const int b { a }; // clearly not a constant expression (since initializer is non-const)
-const int c { 5 }; // clearly a constant expression (since initializer is a constant expression)
-
-const int d { someVar };    // not obvious whether d is usable in a constant expression or not
-const int e { getValue() }; // not obvious whether e is usable in a constant expression or not
+// ────────────────────────────────────────────────────────────
+//  PART 1: THE PROBLEM WITH const
+// ────────────────────────────────────────────────────────────
 
 /*
-here in last two examples above, we are not sure, as to use d in constant expression, we need to be sure that someVar is
-a constant, if someVar is initialize with some function call or variable then we have to inspect those also
+  A const variable with an integral type AND a constant expression
+  initializer CAN be used in a constant expression.
+  All other const variables CANNOT.
 
-one major issue is that non integral constant variables are also cannot be used in constant expression, but many a times
-we want to use non integral const also
+  The problem: just seeing the `const` keyword doesn't tell you
+  whether a variable is usable in a constant expression.
+  You have to trace its initializer — and its initializer's initializer
+  — which gets messy fast.
 
-and to solve all these problems we have constexpr keyword(shorthand for constant expression)
+  Two more issues with const:
+    1. Non-integral const variables (e.g. const double) CANNOT be used
+       in constant expressions, even if initialized with a literal.
+    2. There's no compile-time enforcement — errors show up late or not at all.
 
-a constexpr variable is always a compile time constant, and that's why this needs to be initialized with a constant only
-otherwise we will get a compilation error
+  constexpr solves all of this.
+*/
+
+int a { 5 };        // not const at all
+const int b { a };  // NOT a constant expression — initializer is a variable
+const int c { 5 };  // IS a constant expression — initializer is a literal
+
+// Ambiguous cases — have to trace the origin of someVar / getValue()
+const int d { someVar };    // usable in constant expression ONLY IF someVar is one
+const int e { getValue() }; // usable in constant expression ONLY IF getValue() returns constexpr
+
+
+// ────────────────────────────────────────────────────────────
+//  PART 2: constexpr VARIABLES
+// ────────────────────────────────────────────────────────────
+
+/*
+  constexpr = "constant expression" (shorthand keyword)
+
+  A constexpr variable is ALWAYS a compile-time constant.
+  It MUST be initialized with a constant expression — otherwise
+  you get a compile error immediately. No ambiguity, no tracing.
+
+  Key benefits over const:
+    - Works for non-integral types (double, float, etc.)
+    - Compile-time enforcement — errors are caught early
+    - Explicitly signals intent: "this is always a compile-time constant"
 */
 
 #include <iostream>
 
-// The return value of a non-constexpr function is not constexpr
-int five(){
- return 5;
+// Non-constexpr function — return value is NOT a constant expression
+int five() {
+    return 5;
 }
 
-int main(){
- constexpr double gravity { 9.8 }; // ok: 9.8 is a constant expression
- //as you can see above constexpr works for variables with non-integral types also
- constexpr int sum { 4 + 5 };      // ok: 4 + 5 is a constant expression
- constexpr int something { sum };  // ok: sum is a constant expression
+int main() {
+    constexpr double gravity { 9.8 };  // OK — works for non-integral types too
+    constexpr int sum { 4 + 5 };       // OK — expression of literals
+    constexpr int something { sum };   // OK — sum is itself constexpr
 
- std::cout << "Enter your age: ";
- int age{};
- std::cin >> age;
+    std::cout << "Enter your age: ";
+    int age {};
+    std::cin >> age;
 
- constexpr int myAge { age };      // compile error: age is not a constant expression
- constexpr int f { five() };       // compile error: return value of five() is not constexpr
+    // constexpr int myAge { age };    // COMPILE ERROR: age is a runtime variable
+    // constexpr int f { five() };     // COMPILE ERROR: five() is not a constexpr function
 
- /*Because functions normally execute at runtime, the return value of a function is not constexpr
- (even when the return expression is a constant expression). This is why five() is not a legal initialization value for constexpr int f.*/
+    /*
+      Why does five() fail?
+      Functions normally execute at runtime, so their return value is NOT
+      a constant expression — even when the return value itself is a literal.
+      You need to explicitly mark the function as constexpr to change this.
+    */
 
- return 0;
+    return 0;
 }
 
+
+// ────────────────────────────────────────────────────────────
+//  PART 3: const vs constexpr — SIDE BY SIDE
+// ────────────────────────────────────────────────────────────
 
 /*
-DIFFERENCE (const vs constexpr)
+  ┌─────────────────┬──────────────────────────────────┬──────────────────────────────────┐
+  │                 │             const                │           constexpr              │
+  ├─────────────────┼──────────────────────────────────┼──────────────────────────────────┤
+  │ Meaning         │ Value cannot change after init   │ Usable in a constant expression  │
+  │ Initializer     │ Known at compile-time OR runtime │ Must be known at compile-time    │
+  │ Evaluation      │ Can be evaluated at runtime      │ Can be compile-time or runtime   │
+  │ Non-integral    │ NOT usable in constant expression│ Usable in constant expression    │
+  │ Enforcement     │ No compile-time guarantee        │ Compile error if invalid         │
+  └─────────────────┴──────────────────────────────────┴──────────────────────────────────┘
 
-1. const means that the value of an object cannot be changed after initialization. The value of the initializer may be
-known at compile-time or runtime. The const object can be evaluated at runtime.
-
-2. constexpr means that the object can be used in a constant expression. The value of the initializer must be known
-at compile-time. The constexpr object can be evaluated at runtime or compile-time
-
-Constexpr variables are implicitly const. Const variables are not implicitly constexpr
-(except for const integral variables with a constant expression initializer)
-
+  constexpr variables are IMPLICITLY const.
+  const variables are NOT implicitly constexpr
+    — except: const integral variables with a constant expression initializer.
 */
 
 
+// ────────────────────────────────────────────────────────────
+//  PART 4: constexpr FUNCTIONS
+// ────────────────────────────────────────────────────────────
 
 /*
-CONSTEXPR FUNCTION:
+  A constexpr function CAN be called in a constant expression.
 
-A constexpr function is a function that can be called in a constant expression. A constexpr function must evaluate
-at compile-time when the constant expression it is part of must evaluate at compile time (e.g. in the initializer
-of a constexpr variable). Otherwise, a constexpr function may be evaluated at either compile-time (if eligible)
-or runtime. To be eligible for compile-time execution, all arguments must be constant expressions
+  RULES:
+    1. If the result is used where a constant expression is REQUIRED
+       (e.g. initializer of a constexpr variable) → MUST evaluate at compile-time.
 
- */
+    2. If the arguments are constant expressions but context doesn't require it
+       → MAY evaluate at compile-time (compiler decides).
+
+    3. If arguments are NOT constant expressions (e.g. runtime variables)
+       → evaluates at RUNTIME like a normal function.
+
+  In one line:
+    constexpr functions are ELIGIBLE for compile-time evaluation.
+    Whether they actually run at compile-time depends on context.
+*/
 
 #include <iostream>
 
-int max(int x, int y){ // this is a non-constexpr function
- if (x > y)
-  return x;
- else
-  return y;
+// Non-constexpr function
+int max(int x, int y) {
+    return (x > y) ? x : y;
 }
 
-constexpr int cmax(int x, int y){ // this is a constexpr function
- if (x > y)
-  return x;
- else
-  return y;
+// constexpr function
+constexpr int cmax(int x, int y) {
+    return (x > y) ? x : y;
 }
 
-int main(){
- int m1 { max(5, 6) };            // ok
- const int m2 { max(5, 6) };      // ok
- constexpr int m3 { max(5, 6) };  // compile error: max(5, 6) not a constant expression
+int main() {
+    int m1 { max(5, 6) };            // OK — runtime
+    const int m2 { max(5, 6) };      // OK — runtime
+    // constexpr int m3 { max(5, 6) };  // COMPILE ERROR: max() is not constexpr
 
- int m4 { cmax(5, 6) };           // ok: may evaluate at compile-time or runtime
- const int m5 { cmax(5, 6) };     // ok: may evaluate at compile-time or runtime
- constexpr int m6 { cmax(5, 6) }; // okay: must evaluate at compile-time
+    int m4 { cmax(5, 6) };           // OK — compile-time or runtime (compiler decides)
+    const int m5 { cmax(5, 6) };     // OK — compile-time or runtime (compiler decides)
+    constexpr int m6 { cmax(5, 6) }; // OK — MUST evaluate at compile-time (constexpr context)
 
- return 0;
+    return 0;
 }
+
+
+// ────────────────────────────────────────────────────────────
+//  QUICK REFERENCE
+// ────────────────────────────────────────────────────────────
+
+/*
+  constexpr variable  → always compile-time constant, must be init with constant expression
+  constexpr function  → eligible for compile-time execution, actual timing depends on context
+
+  When IS compile-time execution forced?
+    → When the result is used in a constexpr variable initializer
+    → When used as a template argument
+    → When used as an array size
+
+  When is it runtime?
+    → When any argument is a runtime variable (e.g. from cin)
+    → When the result is stored in a non-constexpr variable (may still optimize, not guaranteed)
+*/

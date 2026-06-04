@@ -76,7 +76,7 @@ int add(int x, int y)
 //
 // Scenario 3: Large projects with hundreds of files
 //   Reordering is not a scalable strategy. Header files containing declarations
-//   are the systematic solution. (Chapter 2.11)
+//   are the systematic solution.
  
  
 // ── DECLARATION vs DEFINITION, THE RULE ─────────────────────────────────────

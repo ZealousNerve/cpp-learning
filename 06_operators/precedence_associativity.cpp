@@ -9,7 +9,6 @@ right, (7-4)-1 = 2*/
 /*
 =============================================================
   OPERATOR PRECEDENCE & ASSOCIATIVITY TABLE (C++)
-  Source: learncpp.com — Chapter 6.1
   Lower number = Higher precedence (1 is highest, 17 is lowest)
   L->R = Left to Right associativity
   R->L = Right to Left associativity

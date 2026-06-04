@@ -2,10 +2,18 @@
 
 int main()
 {
-    bool b{}; // default initialize to false
-    std::cout << "Enter a boolean value: ";
-    std::cin >> b;
-    std::cout << "You entered: " << b << '\n';
+    int x{};
+    int y{};
+    std::cout << "Enter a number: ";
+    std::cin >> x;
+    std::cout << x << std::endl;
+
+    std::cin.clear();
+    std::cin.ignore();
+
+    std::cout << "enter the second number: ";
+    std::cin >> y;
+    std::cout << y;
 
     return 0;
 }

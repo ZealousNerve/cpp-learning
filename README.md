@@ -79,7 +79,6 @@ cpp-learning/
 │   ├── Literals.cpp
 │   ├── optimization.cpp
 │   ├── strigns.cpp
-│   ├── string_view.cpp
 │   └── README.md
 ├── 06_operators/
 │   ├── logical_XOR.cpp
@@ -147,7 +146,7 @@ cpp-learning/
 | Ch.2 | Functions & Files | `✅ Done` | 8 |
 | Ch.3 | Debugging | `✅ Done` | 2 |
 | Ch.4 | Fundamental Data Types | `✅ Done` | 5 |
-| Ch.5 | Constants & Strings | `✅ Done` | 6 |
+| Ch.5 | Constants & Strings | `✅ Done` | 5 |
 | Ch.6 | Operators | `✅ Done` | 3 |
 | Ch.7 | Scope, Duration, Linkage | `⬜ Upcoming` | 0 |
 | Ch.8 | Control Flow | `⬜ Upcoming` | 0 |
@@ -213,15 +212,15 @@ cpp-learning/
 
 ## ◈ My Stack
 
-| Category | Tool | Notes |
-|----------|------|-------|
-| **Machine** | HP Omen, Ryzen 7 7840HS + RTX 4060 | Compiles fast |
-| **OS** | Windows 11 + WSL2 (Kali Linux) | Best of both worlds |
-| **IDE** | JetBrains CLion (student license) | Refactoring + debugger |
-| **Compiler** | MinGW-w64 (GCC), `-std=c++17 -Wall -Wextra` | Strict warnings on |
-| **Reference** | LearnCpp.com (Ch.0 → Ch.28) | The best free C++ resource |
-| **Supplementary** | cppreference.com | When I need the spec |
-| **Version Control** | Git + GitHub | This repo |
+| Category | Tool                                                   | Notes |
+|----------|--------------------------------------------------------|-------|
+| **Machine** | HP Omen, Ryzen 7 7840HS + RTX 4060 (8GB)               | Compiles fast |
+| **OS** | Windows 11 + WSL2 (Kali Linux) + Dual Boot (Arch Linux)| Best of both worlds |
+| **IDE** | JetBrains CLion (student license)                      | Refactoring + debugger |
+| **Compiler** | MinGW-w64 (GCC), `-std=c++17 -Wall -Wextra`            | Strict warnings on |
+| **Reference** | LearnCpp.com (Ch.0 → Ch.28)                            | The best free C++ resource |
+| **Supplementary** | cppreference.com                                       | When I need the spec |
+| **Version Control** | Git + GitHub                                           | This repo |
 
 ---
 

@@ -1,45 +1,48 @@
-paused
-
-# Literals, Strings, and String Views
+# String and String View in C++
 
 ## Key Concepts
-- **Literals**: Understand how to use various C++ literals (integer, floating-point, character, string) and their suffixes.
-- **Strings**: Learn about `std::string` and its usage, including input handling with `std::getline()` and string manipulation.
-- **String Views**: Explore `std::string_view` and its benefits for read-only string access without copying.
-- **String Literals**: Recognize the difference between C-style string literals and `std::string`/`std::string_view` literals.
-- **Suffixes**: Use `s` for `std::string` literals and `sv` for `std::string_view` literals.
-- **Performance**: Understand when to use `std::string` vs `std::string_view` for efficiency and correctness.
+
+- **`std::string`** is used for storing and modifying text, handling user input, and returning values from functions.
+- **`std::string_view`** is a non-owning, read-only view of a string, ideal for function parameters and avoiding unnecessary copies.
+- **Literal suffixes** (`s`, `sv`) allow for easy creation of `std::string` and `std::string_view` from string literals.
+- **`std::string_view`** must never outlive the string it views, as it does not take ownership.
+- **`std::string_view`** can be constructed from various sources: C-style strings, `std::string`, and string literals.
+- **`std::string_view`** is preferred for function parameters when only read access is needed.
 
 ## Critical Insights
-```cpp
-// ❌ Avoid passing std::string by value
-void badFunction(std::string s) { /* ... */ }
 
-// ✅ Prefer passing by const reference
-void goodFunction(const std::string& s) { /* ... */ }
+### ❌ Dangling `std::string_view` is undefined behavior
+```cpp
+{
+    std::string temp { "I am temporary" };
+    std::string_view watching { temp };
+    std::cout << watching << '\n';   // ✅ fine — temp is alive here
+}
+// std::cout << watching;            // ❌ temp is gone → watching is dangling → UB
 ```
 
+### ✅ Use `std::getline(std::cin >> std::ws, str)` for line input
 ```cpp
-// ❌ Don't use std::string for read-only access
-void process(const std::string& s) { /* ... */ }
-
-// ✅ Use std::string_view for read-only access
-void process(std::string_view s) { /* ... */ }
+std::string str;
+std::getline(std::cin >> std::ws, str);
 ```
 
+### ✅ Prefer `std::string_view` for function parameters
 ```cpp
-// ✅ Use string_view for symbolic constants
-constexpr std::string_view s = "Hello, world!";
+void printByView(const std::string_view& sv);
+printByView("literal");    // ✅
+printByView(owned);        // ✅
+printByView(sv);           // ✅
 ```
 
 ## Files in this Chapter
+
 | File | What it demonstrates |
 |------|----------------------|
-| literals.cpp | C++ literals and their suffixes |
-| strings.cpp | std::string usage and input handling |
-| string_view.cpp | std::string_view usage and benefits |
+| `strings.cpp` | Demonstrates `std::string`, `std::string_view`, literal suffixes, and common usage patterns |
 
 ## What to Remember
-- Avoid passing `std::string` by value when unnecessary; prefer const references.
-- Use `std::string_view` for read-only string access to avoid unnecessary copies.
-- Prefer `std::string_view` for function parameters and return types involving string literals.
+
+- Never pass `std::string` by value unless you need a copy.
+- Always use `std::getline(std::cin >> std::ws, str)` for line input.
+- `std::string_view` must never outlive the string it views.

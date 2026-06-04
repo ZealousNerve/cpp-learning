@@ -1,4 +1,4 @@
-#include <cmath>
+#include <cmath>//we are importing a C based library math and that's why we are having a prefix c before math
 #include <iostream>
 int main(){
 

@@ -113,7 +113,7 @@ Interpreting: Source Code → Interpreter → Executes directly (slower)
 - Graphical apps and simulations
 - Embedded software
 - Audio/video processing
-- **AI and neural networks** ← relevant to your Jarvis goal
+- **AI and neural networks** 
 
 ### Is C++ Dying?
 > ❌ No. Consistently ranked 2nd–3rd most popular compiled language. Updates every 3 years. Dominates game dev and systems programming.

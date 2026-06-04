@@ -1,6 +1,6 @@
 //Consider the following academic example:
 
-//(we are defining a function in header fil just for the understanding, this is not recommended at all)
+//(we are defining a function in header file just for the understanding, this is not recommended at all)
 
 // square.h:----------------
 int getSquareSides(){
@@ -37,12 +37,12 @@ int getSquareSides(){
 }
 #endif
 
-//so all the header files must contains this header guards, as you can see the ifdef directives check whether that square.h
+//so all the header files must contain this header guards, as you can see the ifdef directives check whether that square.h
 //is defined earlier, if yes then do nothing if not defined then add that definition
 
 //remember these preprocessors are just copy and paste replacement thing, so now if square.h is imported then the main.cpp will
 //contain that square.h and that ifndef directive will run and define the function as it wasn't defined earlier,
-//then when main.cpp includes wave.h then then square.h in wave.h already sees that it is defined in main.cpp so it won't let
+//then when main.cpp includes wave.h then, then square.h in wave.h already sees that it is defined in main.cpp so it won't let
 //it get defined again
 
 

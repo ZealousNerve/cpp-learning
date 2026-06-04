@@ -39,28 +39,27 @@ void output_buffering_demo()
 
 
 // ── PART 2: Input Buffering ────────────────────────────────────────────────
-//
+
 // cin uses the SAME buffering concept as cout.
 // Input is stored as: [characters]['\n']
 // cin >> x extracts characters and STOPS at the first non-matching character
 // or whitespace. The newline '\n' is LEFT in the buffer.
-//
+
 // Three extraction scenarios, memorize these:
-//
+
 // CASE 1: User types "5\n"
 //   cin >> x extracts 5, discards the '\n'. Clean.
-//
+
 // CASE 2: User types "5a\n"
 //   cin >> x extracts 5, leaves 'a\n' in the buffer.
 //   The next cin call reads 'a' without waiting for input.
 //   This is the source of most beginner "my input is being skipped" bugs.
-//
+
 // CASE 3: User types "b\n" when expecting an int
 //   'b' is not a valid integer character, extraction FAILS.
 //   x is set to 0 (or left unchanged in older standards).
 //   cin enters a FAILED STATE. All subsequent extractions silently do nothing
-//   until the stream is explicitly cleared with cin.clear() and flushed
-//   with cin.ignore().
+//   until the stream is explicitly reset the failed state using cin.clear() and flushed with cin.ignore().
 
 void input_buffering_demo()
 {

@@ -1,10 +1,10 @@
 //Errors generally fall into one of two categories: syntax errors, and semantic errors (logic errors).
 
 /*
-one important step in debugging is to reproduce the problem or error, suppose i have a problem, but i told my
-friend to debug it but as he runs the code worked so how will he debug and for this we need to reproduce the error
+one important step in debugging is to reproduce the problem or error, suppose I have a problem, but I told my
+friend to debug it but as he runs, the code worked so how will he debug and for this we need to reproduce the error
 again and again until we find the exact problem, suppose the problem is the code will not run on my device, suppose
-my compiler is not working, so know this, we need to reproduce the error again and again
+my compiler is not working, so to know this, we need to reproduce the error again and again
 */
 
 /*
@@ -16,7 +16,7 @@ my compiler is not working, so know this, we need to reproduce the error again a
 
  * debugging tactic #2:validating our code flow
    sometimes in a program a function is called once or many times, now how do we know whether a function is called or not
-   or which function is called at the time of issue, so that's why in out code at the start of every function we print
+   or which function is called at the time of issue, so that's why in our code at the start of every function we print
    a line like "inside main function" or "main function is called" so that at we can check okay this part of code run
    but no error till now, ohh! this part of code run and the error is just after this step
 
