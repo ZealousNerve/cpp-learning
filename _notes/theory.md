@@ -153,5 +153,6 @@ that need a parameterized type.
 With normal functions, we call function(object). With member functions, we call object.function().
 
 ---
+blocks are treated as a single statement
 ````
 *Add to this file whenever something clicks that belongs to no single chapter.*

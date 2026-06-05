@@ -95,6 +95,11 @@ cpp-learning/
 │   ├── variable.cpp
 │   └── README.md
 ├── 08_control_flow/
+│   ├── control_flow.cpp
+│   ├── halt.cpp
+│   ├── loops.cpp
+│   ├── random_numbers.cpp
+│   ├── switch.cpp
 │   └── README.md
 ├── 09_error_handling/
 │   └── README.md
@@ -156,7 +161,7 @@ cpp-learning/
 | Ch.5 | Constants & Strings | `✅ Done` | 5 |
 | Ch.6 | Operators | `✅ Done` | 3 |
 | Ch.7 | Scope, Duration, Linkage | `✅ Done` | 6 |
-| Ch.8 | Control Flow | `⬜ Upcoming` | 0 |
+| Ch.8 | Control Flow | `✅ Done` | 5 |
 | Ch.9 | Error Detection & Handling | `⬜ Upcoming` | 0 |
 | Ch.10 | Type Conversion & Deduction | `⬜ Upcoming` | 0 |
 | Ch.11 | Function Overloading & Templates | `⬜ Upcoming` | 0 |

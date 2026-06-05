@@ -43,5 +43,10 @@ foreach(SOURCE_FILE ${ALL_SOURCES})
             07_scope_linkage/linkage.cpp
             07_scope_linkage/inline.cpp
             07_scope_linkage/Global_Constants.cpp
-            07_scope_linkage/Extras.cpp)
+            07_scope_linkage/Extras.cpp
+            08_control_flow/control_flow.cpp
+            08_control_flow/switch.cpp
+            08_control_flow/loops.cpp
+            08_control_flow/halt.cpp
+            08_control_flow/random_numbers.cpp)
 endforeach()
