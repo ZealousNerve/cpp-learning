@@ -59,6 +59,7 @@ cpp-learning/
 │   ├── header_guards.cpp
 │   ├── local_scope.cpp
 │   ├── macros_conditional.cpp
+│   ├── namingCollison_namespace.cpp
 │   ├── preprocessor.cpp
 │   ├── void_functions.cpp
 │   └── README.md
@@ -86,6 +87,12 @@ cpp-learning/
 │   ├── precedence_associativity.cpp
 │   └── README.md
 ├── 07_scope_linkage/
+│   ├── Extras.cpp
+│   ├── Global_Constants.cpp
+│   ├── inline.cpp
+│   ├── linkage.cpp
+│   ├── namespace.cpp
+│   ├── variable.cpp
 │   └── README.md
 ├── 08_control_flow/
 │   └── README.md
@@ -143,12 +150,12 @@ cpp-learning/
 |:-------:|-------|:------:|:-----:|
 | Ch.0 | Introduction & Setup | `✅ Done` | 0 |
 | Ch.1 | C++ Basics | `✅ Done` | 2 |
-| Ch.2 | Functions & Files | `✅ Done` | 8 |
+| Ch.2 | Functions & Files | `✅ Done` | 9 |
 | Ch.3 | Debugging | `✅ Done` | 2 |
 | Ch.4 | Fundamental Data Types | `✅ Done` | 5 |
 | Ch.5 | Constants & Strings | `✅ Done` | 5 |
 | Ch.6 | Operators | `✅ Done` | 3 |
-| Ch.7 | Scope, Duration, Linkage | `⬜ Upcoming` | 0 |
+| Ch.7 | Scope, Duration, Linkage | `✅ Done` | 6 |
 | Ch.8 | Control Flow | `⬜ Upcoming` | 0 |
 | Ch.9 | Error Detection & Handling | `⬜ Upcoming` | 0 |
 | Ch.10 | Type Conversion & Deduction | `⬜ Upcoming` | 0 |

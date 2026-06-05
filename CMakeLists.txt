@@ -34,8 +34,14 @@ foreach(SOURCE_FILE ${ALL_SOURCES})
     add_executable(${TARGET_NAME} ${SOURCE_FILE}
             05_constants_strings/constexpr.cpp
             05_constants_strings/strigns.cpp
-            05_constants_strings/string_view.cpp
             06_operators/precedence_associativity.cpp
             06_operators/other_operators.cpp
-            06_operators/logical_XOR.cpp)
+            06_operators/logical_XOR.cpp
+            02_functions/namingCollison_namespace.cpp
+            07_scope_linkage/namespace.cpp
+            07_scope_linkage/variable.cpp
+            07_scope_linkage/linkage.cpp
+            07_scope_linkage/inline.cpp
+            07_scope_linkage/Global_Constants.cpp
+            07_scope_linkage/Extras.cpp)
 endforeach()

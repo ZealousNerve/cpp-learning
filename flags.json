@@ -6,15 +6,16 @@
     "03_debugging",
     "04_data_types",
     "05_constants_strings",
-    "06_operators"
+    "06_operators",
+    "07_scope_linkage"
   ],
   "summarized": [
     "00_foundations",
     "01_basics",
-    "02_functions",
     "03_debugging",
     "04_data_types",
-    "06_operators"
+    "06_operators",
+    "05_constants_strings"
   ],
-  "last_run": "2026-06-04T00:49:45.072851"
+  "last_run": "2026-06-04T19:43:57.600251"
 }
