@@ -177,7 +177,7 @@ cpp-learning/
 | Ch.8 | Control Flow | `✅ Done` | 5 |
 | Ch.9 | Error Detection & Handling | `✅ Done` | 2 |
 | Ch.10 | Type Conversion & Deduction | `✅ Done` | 8 |
-| Ch.11 | Function Overloading & Templates | `🔄 In Progress` | 3 |
+| Ch.11 | Function Overloading & Templates | `✅ Done` | 3 |
 | Ch.12 | References & Pointers | `⬜ Upcoming` | 0 |
 | Ch.13 | Enums & Structs | `⬜ Upcoming` | 0 |
 | Ch.14 | Introduction to Classes | `⬜ Upcoming` | 0 |
