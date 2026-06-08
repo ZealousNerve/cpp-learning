@@ -58,5 +58,8 @@ foreach(SOURCE_FILE ${ALL_SOURCES})
             10_type_system/arithmetic_conversion.cpp
             10_type_system/explicit_casting.cpp
             10_type_system/type_alias.cpp
-            10_type_system/type_deduction.cpp)
+            10_type_system/type_deduction.cpp
+            11_templates/function_overloading.cpp
+            11_templates/default_arguments.cpp
+            11_templates/function_templates.cpp)
 endforeach()
