@@ -106,10 +106,14 @@ cpp-learning/
 │   ├── errrors.cpp
 │   └── README.md
 ├── 10_type_system/
+│   ├── arithmetic_conversion.cpp
+│   ├── explicit_casting.cpp
 │   ├── implicit_conversion.cpp
 │   ├── narrow_conversion.cpp
 │   ├── numeric_conversion.cpp
 │   ├── numeric_promotion.cpp
+│   ├── type_alias.cpp
+│   ├── type_deduction.cpp
 │   └── README.md
 ├── 11_templates/
 │   └── README.md
@@ -169,7 +173,7 @@ cpp-learning/
 | Ch.7 | Scope, Duration, Linkage | `✅ Done` | 6 |
 | Ch.8 | Control Flow | `✅ Done` | 5 |
 | Ch.9 | Error Detection & Handling | `✅ Done` | 2 |
-| Ch.10 | Type Conversion & Deduction | `🔄 In Progress` | 4 |
+| Ch.10 | Type Conversion & Deduction | `✅ Done` | 8 |
 | Ch.11 | Function Overloading & Templates | `⬜ Upcoming` | 0 |
 | Ch.12 | References & Pointers | `⬜ Upcoming` | 0 |
 | Ch.13 | Enums & Structs | `⬜ Upcoming` | 0 |

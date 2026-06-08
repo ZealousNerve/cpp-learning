@@ -54,5 +54,9 @@ foreach(SOURCE_FILE ${ALL_SOURCES})
             10_type_system/implicit_conversion.cpp
             10_type_system/numeric_promotion.cpp
             10_type_system/numeric_conversion.cpp
-            10_type_system/narrow_conversion.cpp)
+            10_type_system/narrow_conversion.cpp
+            10_type_system/arithmetic_conversion.cpp
+            10_type_system/explicit_casting.cpp
+            10_type_system/type_alias.cpp
+            10_type_system/type_deduction.cpp)
 endforeach()
