@@ -106,6 +106,10 @@ cpp-learning/
 │   ├── errrors.cpp
 │   └── README.md
 ├── 10_type_system/
+│   ├── implicit_conversion.cpp
+│   ├── narrow_conversion.cpp
+│   ├── numeric_conversion.cpp
+│   ├── numeric_promotion.cpp
 │   └── README.md
 ├── 11_templates/
 │   └── README.md
@@ -165,7 +169,7 @@ cpp-learning/
 | Ch.7 | Scope, Duration, Linkage | `✅ Done` | 6 |
 | Ch.8 | Control Flow | `✅ Done` | 5 |
 | Ch.9 | Error Detection & Handling | `✅ Done` | 2 |
-| Ch.10 | Type Conversion & Deduction | `⬜ Upcoming` | 0 |
+| Ch.10 | Type Conversion & Deduction | `🔄 In Progress` | 4 |
 | Ch.11 | Function Overloading & Templates | `⬜ Upcoming` | 0 |
 | Ch.12 | References & Pointers | `⬜ Upcoming` | 0 |
 | Ch.13 | Enums & Structs | `⬜ Upcoming` | 0 |

@@ -134,27 +134,129 @@ def get_cpp_files(folder: Path) -> list[Path]:
 # ─────────────────────────────────────────────
 
 CHAPTER_README_PROMPT = """\
-You are writing a chapter summary README.md for a C++ learning repository.
-Chapter: {chapter_name}
+[TASK]
+Generate a README.md file for one chapter of a C++ learning repository.
+Your output will be written DIRECTLY to disk as a Markdown file.
+There is NO human reviewing this before it is saved.
+Any text you write outside the document structure will corrupt the file.
 
-Below are all the .cpp source files the student wrote for this chapter:
+[CHAPTER]
+{chapter_name}
+
+[SOURCE FILES]
+The student's .cpp files for this chapter are below.
+Each file is separated by a --- FILE: filename.cpp --- marker.
+Read ALL files before writing anything.
 
 {all_files}
 
-Write a comprehensive but concise Markdown README.md that:
-1. Opens with a # heading equal to the chapter name.
-2. Has a "## Key Concepts" section listing what was learned.
-3. Has a "## Critical Insights" section with 2-3 code snippets (```cpp fences)
-   highlighting non-obvious or important patterns — prefer ❌/✅ contrasts or
-   KEY INSIGHT blocks if present in the source files.
-4. Has a "## Files in this Chapter" table:
-   | File | What it demonstrates |
-5. Ends with "## What to Remember" — max 3 bullets covering common pitfalls.
+[OUTPUT STRUCTURE]
+Write the document in this EXACT order. No extra sections. No reordering.
 
-Tone: clear, technical, no filler. Write as if explaining to a fellow CSE student.
-Output ONLY raw Markdown. No preamble, no explanation outside the document.
+────────────────────────────────────────────────────
+BLOCK 1 — Title
+────────────────────────────────────────────────────
+Write this line verbatim, replacing the placeholder:
+  # {chapter_name}
+
+Then write ONE sentence (max 25 words) summarizing what this chapter
+is fundamentally about. No heading for this sentence — it sits bare
+under the title as a standalone paragraph.
+
+────────────────────────────────────────────────────
+BLOCK 2 — Key Concepts  (heading: ## Key Concepts)
+────────────────────────────────────────────────────
+A bullet list. Each bullet:
+  - **Concept name**: One sentence explaining what it is or how it works.
+
+Rules:
+  - 4 bullets minimum, 10 bullets maximum.
+  - Extract concepts ONLY from the source files above.
+    If a concept is not demonstrated in the code, do not include it.
+  - Use **double asterisks** for bold. Never underscores.
+  - Bullet marker is - (hyphen). Never * or numbers.
+
+────────────────────────────────────────────────────
+BLOCK 3 — Critical Insights  (heading: ## Critical Insights)
+────────────────────────────────────────────────────
+2 to 3 subsections. Each subsection covers one non-obvious or
+easy-to-misunderstand idea from the source files.
+
+Each subsection structure:
+  ### [Name of the insight — phrase it as a specific claim or question]
+  [One ```cpp code block — see rules below]
+  [1 to 3 sentences explaining WHY this matters]
+
+Code block rules — follow this priority order:
+  PRIORITY 1: If the source file contains a ❌ / ✅ contrast block,
+              reproduce that contrast inside the ```cpp block.
+  PRIORITY 2: If the source file contains a comment labeled
+              KEY INSIGHT, IMPORTANT, or NOTE —
+              reproduce that block inside the ```cpp block.
+  PRIORITY 3: If neither exists, write your own minimal example
+              showing the correct vs. incorrect pattern (max 15 lines).
+
+Code block format — use EXACTLY this:
+```cpp
+  // your code here
+```
+
+Never use indented code blocks. Never omit the language tag.
+Each subsection gets exactly ONE code block — not zero, not two.
+
+────────────────────────────────────────────────────
+BLOCK 4 — What to Remember  (heading: ## What to Remember)
+────────────────────────────────────────────────────
+Exactly 3 bullet points. No more, no fewer.
+Each bullet covers one common pitfall or mistake for this chapter's topic.
+Each bullet MUST start with ⚠️
+Each bullet is 1 to 2 sentences max.
+
+[OUTPUT RULES — READ BEFORE WRITING]
+These rules are non-negotiable. Violating any one of them damages the file.
+
+RULE 1 — Raw Markdown only.
+  Do NOT wrap your output in a ```markdown fence.
+  Do NOT wrap your output in any outer fence of any kind.
+  The first character of your output must be: #
+
+RULE 2 — No preamble.
+  Do NOT write "Here is the README", "Sure!", "Below is the document",
+  or any sentence before the # title heading.
+
+RULE 3 — No sign-off.
+  Do NOT write "Let me know if you want changes", "Hope this helps",
+  or anything after the last bullet of "What to Remember".
+
+RULE 4 — No invented content.
+  Every concept, insight, and code example must come from the source files.
+  Do not invent topics the student did not write about.
+
+RULE 5 — No extra sections.
+  Do not add sections like "Further Reading", "TODO", "Summary",
+  "References", or anything not in the 4 blocks above.
+
+RULE 6 — Section count is fixed.
+  The document has exactly 4 top-level blocks.
+  "Key Concepts" is always ## level.
+  "Critical Insights" is always ## level with ### subsections inside.
+  "What to Remember" is always ## level.
+
+RULE 7 — Total length.
+  Keep the full document under 450 words.
+  Cut padding ruthlessly. Every sentence must add information.
+
+[SELF-CHECK BEFORE OUTPUTTING]
+Verify each item before writing your final output:
+  □ First character of output is #
+  □ Title matches {chapter_name} exactly
+  □ One-sentence summary is present and under 25 words
+  □ Key Concepts has 4–10 bullets, all sourced from the files
+  □ Critical Insights has 2–3 ### subsections, each with exactly one ```cpp block
+  □ What to Remember has exactly 3 bullets, each starting with ⚠️
+  □ No preamble, no sign-off, no extra sections
+  □ Output is raw Markdown — no outer fence wrapping it
 """
-
 
 def generate_chapter_readme(folder: Path) -> bool:
     cpp_files = get_cpp_files(folder)

@@ -1,52 +1,47 @@
-nonce
+읏
 
-# Control Flow and Randomization
+# 08_control_flow
 
+Control flow structures enable programs to make decisions and repeat actions based on conditions and iterations.
+
+────────────────────────────────────────────────────
 ## Key Concepts
-- **Switch Statements**: Used for branching based on integral or enum values. Each case must be a constant expression.
-- **Fallthrough**: Default behavior in C++ is to not fall through cases unless explicitly stated. Use `[[fallthrough]]` for intentional fallthrough.
-- **Random Number Generation**: Use `<random>` header for robust random number generation. `std::mt19937` is a high-quality PRNG.
-- **Seeding**: Properly seed PRNGs with `std::random_device` for better randomness. Avoid reseeding.
-- **Control Flow**: `break`, `continue`, and `return` control the flow of execution. `switch` requires `break` (or `return`, `throw`, etc.) to exit the block.
-- **Initialization in Switch**: Variables can be declared in switch blocks, but care must be taken with initialization and scope.
+- **Switch Statements** evaluate an expression and execute associated case blocks based on matching values.
+- **Break Statements** exit a switch block or loop, preventing further execution of subsequent cases or iterations.
+- **Fallthrough** allows execution to continue to the next case without a break, indicated by [[fallthrough]].
+- **Integral Types** are required for switch conditions, including enums and convertible types.
+- **Default Case** handles unmatched values in a switch statement.
+- **Loop Control** uses break and continue to manage iteration flow.
+- **Conditionals** use if-else to execute code based on boolean expressions.
+- **Range-Based Loops** iterate over elements in containers like arrays and vectors.
+- **Nested Loops** allow multiple loops to execute within each other.
+- **Labelled Statements** enable jumping to specific points in code using goto.
 
+────────────────────────────────────────────────────
 ## Critical Insights
-### ❌ Bad: Reseeding PRNG in a function
-```cpp
-int getCard_BAD()
-{
-    std::mt19937 mt{ std::random_device{}() }; // re-seeded every call → bad quality + slow
-    std::uniform_int_distribution card{ 1, 52 };
-    return card(mt);
-}
-```
-
-### ✅ Good: Single PRNG instance
-```cpp
-int getCard_GOOD()
-{
-    static std::mt19937 mt{ std::random_device{}() }; // initialized only once
-    std::uniform_int_distribution card{ 1, 52 };
-    return card(mt);
-}
-```
-
-### ❌ Bad: Initialization in switch case
+### Why Use [[fallthrough]] in Switch Statements?
 ```cpp
 case 2:
-    int y = 5; // illegal: initialization is not allowed if subsequent cases exist
+    std::cout << "Two";
+    [[fallthrough]];
+case 3:
+    std::cout << "Three";
+    break;
 ```
+Using [[fallthrough]] explicitly indicates intentional fallthrough, avoiding compiler warnings and improving code clarity.
 
-## Files in this Chapter
-| File | What it demonstrates |
-|------|----------------------|
-| switch.cpp | Switch statements, fallthrough, and variable scope |
-| random.cpp | Random number generation with std::mt19937 and distributions |
-| control_flow.cpp | Control flow with break, continue, and return |
-| seeding.cpp | Proper seeding of PRNGs with std::random_device |
-| switch_init.cpp | Variable initialization within switch cases |
+### What Happens If You Forget to Break in a Switch?
+```cpp
+case 1:
+    std::cout << "One";
+case 2:
+    std::cout << "Two";
+    break;
+```
+Forgetting to break causes fallthrough, leading to unintended execution of subsequent cases. This can result in logic errors and hard-to-debug behavior.
 
+────────────────────────────────────────────────────
 ## What to Remember
-- Always use `[[fallthrough]]` for intentional fallthrough in switch statements.
-- Avoid reseeding PRNGs unless necessary; seed once and reuse.
-- Be cautious with variable initialization in switch cases; avoid initializing if subsequent cases exist.
+⚠️ Always use break or return to exit switch cases and loops to prevent unintended fallthrough.  
+⚠️ Ensure switch conditions are integral types or enums to avoid compilation errors.  
+⚠️ Use [[fallthrough]] to indicate intentional fallthrough and avoid compiler warnings.

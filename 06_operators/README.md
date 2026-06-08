@@ -1,46 +1,34 @@
 # 06_operators
 
-## Key Concepts
+This chapter explores C++ operators, their types, and how they enable essential operations like arithmetic, comparison, and logical processing.
 
-- Logical XOR can be simulated using `!=` with boolean conversions.
-- C++ does not have a built-in logical XOR operator, but `!=` works on booleans.
-- The comma operator allows multiple expressions to be evaluated in one statement.
-- The conditional operator `?:` provides a ternary form of `if-else`.
-- Relational operators can be dangerous with floating-point numbers due to precision issues.
-- Logical operators `!`, `&&`, and `||` have short-circuit evaluation behavior.
-- Operator precedence and associativity determine the order of evaluation in expressions.
-- The `pow` function from `<cmath>` is used for exponentiation in C++.
+## Key Concepts
+- **Arithmetic operators** (`+`, `-`, `*`, `/`, `%`) perform basic mathematical operations on numeric values.
+- **Comparison operators** (`<`, `>`, `<=`, `>=`, `==`, `!=`) evaluate relationships between operands and return boolean results.
+- **Logical operators** (`&&`, `||`, `!`) combine or negate boolean expressions to control program flow.
+- **Bitwise operators** (`<<`, `>>`, `&`, `|`, `^`, `~`) manipulate individual bits of integers for low-level operations.
+- **Assignment operators** (`=`, `+=`, `-=` etc.) assign values to variables and can also perform operations.
+- **Conditional operator** (`?:`) provides a shorthand for `if-else` statements by returning a value based on a condition.
+- **Comma operator** (`,`) allows multiple expressions to be evaluated in sequence, with the result of the last expression being returned.
+- **Shift operators** (`<<`, `>>`) shift the bits of a number left or right, often used for efficient multiplication/division by powers of two.
+- **Ternary operator** (`?:`) is a shorthand for `if-else` that returns a value based on a condition.
+- **Operator precedence** determines the order in which operators are evaluated in complex expressions.
 
 ## Critical Insights
-
-### ❌ Bitwise XOR is not logical XOR
+### Operator precedence vs. order of evaluation
 ```cpp
-int a = 5, b = 3;
-int result = a ^ b; // 6 (binary 110)
+int a = 5 + 3 * 2; // Result is 11, not 16
 ```
+Operator precedence dictates that multiplication occurs before addition, which can lead to unexpected results if not understood.
 
-### ✅ Logical XOR using `!=` with boolean conversion
+### Bitwise vs. logical operators
 ```cpp
-bool a = true, b = false;
-bool result = a != b; // true
+int a = 5 & 3; // Result is 1 (binary 01 & 01)
+bool b = (5 && 3); // Result is true
 ```
-
-### ❌ Precedence can change meaning of expressions
-```cpp
-if (!x > y) { /* ... */ }
-// Evaluates as (!x) > y, not !(x > y)
-```
-
-## Files in this Chapter
-
-| File | What it demonstrates |
-|------|----------------------|
-| precedence_associativity.cpp | Operator precedence and associativity table |
-| other_operators.cpp | Comma operator, conditional operator, and logical operators |
-| logical_xor.cpp | Simulating logical XOR using `!=` |
+Bitwise operators work on individual bits, while logical operators evaluate boolean expressions, leading to different outcomes.
 
 ## What to Remember
-
-- Use `!=` with boolean conversions for logical XOR.
-- Parenthesize complex expressions to avoid precedence errors.
-- Be cautious with floating-point comparisons using relational operators.
+⚠️ **Precedence ≠ evaluation order** — parentheses are essential to enforce the desired sequence of operations.  
+⚠️ **Avoid using `^` for exponentiation** — it represents bitwise XOR, not power. Use `std::pow()` instead.  
+⚠️ **Use `==` for comparison, not `=`** — the latter assigns values and can lead to logical errors in conditionals.

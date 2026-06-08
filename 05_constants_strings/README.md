@@ -1,48 +1,34 @@
-# String and String View in C++
+# 05_constants_strings
+
+This chapter explains how to effectively use constants and strings in C++, including best practices for handling input and avoiding common pitfalls.
 
 ## Key Concepts
-
-- **`std::string`** is used for storing and modifying text, handling user input, and returning values from functions.
-- **`std::string_view`** is a non-owning, read-only view of a string, ideal for function parameters and avoiding unnecessary copies.
-- **Literal suffixes** (`s`, `sv`) allow for easy creation of `std::string` and `std::string_view` from string literals.
-- **`std::string_view`** must never outlive the string it views, as it does not take ownership.
-- **`std::string_view`** can be constructed from various sources: C-style strings, `std::string`, and string literals.
-- **`std::string_view`** is preferred for function parameters when only read access is needed.
+- **std::string** is a dynamic sequence container for characters, allowing modification and storage of text.
+- **std::string_view** is a non-owning reference to a string, ideal for read-only operations and avoiding unnecessary copies.
+- **C-style strings** are null-terminated arrays of characters, often used with legacy functions and string literals.
+- **constexpr** allows string literals to be used in constant expressions, enabling compile-time string manipulation.
 
 ## Critical Insights
-
-### ❌ Dangling `std::string_view` is undefined behavior
+### Why use `std::getline(std::cin >> std::ws, str)` for line input?
 ```cpp
-{
-    std::string temp { "I am temporary" };
-    std::string_view watching { temp };
-    std::cout << watching << '\n';   // ✅ fine — temp is alive here
-}
-// std::cout << watching;            // ❌ temp is gone → watching is dangling → UB
-```
-
-### ✅ Use `std::getline(std::cin >> std::ws, str)` for line input
-```cpp
-std::string str;
+// ✅ Correct
 std::getline(std::cin >> std::ws, str);
-```
 
-### ✅ Prefer `std::string_view` for function parameters
+// ❌ Incorrect
+std::cin >> str;
+```
+This matters because `std::cin >> str` leaves the newline character in the input buffer, causing subsequent inputs to fail.
+
+### Why can't you return a local `std::string` as a `std::string_view`?
 ```cpp
-void printByView(const std::string_view& sv);
-printByView("literal");    // ✅
-printByView(owned);        // ✅
-printByView(sv);           // ✅
+std::string_view getLocalString() {
+    std::string local = "hello";
+    return local; // ✅ safe
+}
 ```
-
-## Files in this Chapter
-
-| File | What it demonstrates |
-|------|----------------------|
-| `strings.cpp` | Demonstrates `std::string`, `std::string_view`, literal suffixes, and common usage patterns |
+This is safe because `std::string_view` references the local string, which lives until the function returns.
 
 ## What to Remember
-
-- Never pass `std::string` by value unless you need a copy.
-- Always use `std::getline(std::cin >> std::ws, str)` for line input.
-- `std::string_view` must never outlive the string it views.
+⚠️ Never pass `std::string` by value unless you need a copy.  
+⚠️ Always cast `.length()` to `int` with `static_cast<int>()` to avoid warnings.  
+⚠️ `std::string_view` must never outlive the string it references.

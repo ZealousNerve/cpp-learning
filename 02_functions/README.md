@@ -1,49 +1,43 @@
-Zombie
+# 02_functions
 
-# Preprocessor and Void Functions
+Functions are reusable blocks of code that perform specific tasks, enabling modularity and clarity in program design.
 
+────────────────────────────────────────────────────
 ## Key Concepts
-- The preprocessor runs before the compiler and handles `#include`, `#define`, and conditional compilation.
-- `#include <header>` inserts the header's content into the source file, while `#include "file"` searches the current directory first.
-- `#define` macros are replaced by the preprocessor, which is scope-unaware and active from definition to end of file.
-- `void` functions perform side effects and do not return values. Using their result is a compile-time error.
-- Early returns in `void` functions are idiomatic for handling invalid cases without deep nesting.
+- **void functions** are functions that do not return a value, used for performing actions without producing output.
+- **early return** is a pattern where a function exits prematurely to handle invalid cases, improving readability and reducing nesting.
+- **guard clauses** are early returns used to handle precondition failures, allowing the rest of the function to focus on valid cases.
+- **return type** is the type of value a function returns to its caller, with `void` indicating no value is returned.
+- **side effects** are changes made to the state of a program, such as printing to the console or modifying variables.
+- **function parameters** are inputs passed to a function, allowing it to operate on different data each time it is called.
+- **function calls** are invocations of a function, used to execute its code and potentially use its return value.
+- **compile-time errors** are errors detected by the compiler before the program is run, such as using the return value of a `void` function.
+- **function declaration** is the syntax used to define a function, including its name, parameters, and return type.
+- **function definition** is the implementation of a function, containing the code that performs its task.
 
+────────────────────────────────────────────────────
 ## Critical Insights
-
+### ❌ Using void functions as if they return a value
 ```cpp
-// ❌ Bad: Using the result of a void function
-std::cout << doSomething();  // error: void value not ignored as it ought to be
+void doSomething() {
+    std::cout << "doing something\n";
+}
+// std::cout << doSomething(); // ❌ COMPILE ERROR
 ```
+The compiler will catch this error before the program is built, ensuring that developers do not mistakenly use the return value of a `void` function.
 
+### ✅ Early return for error handling
 ```cpp
-// ✅ Good: Early return in a void function
 void printPositive(int x) {
     if (x <= 0)
-        return;  // exit early without printing
+        return;     // ✅ exit early, don't print anything for non-positive values
     std::cout << x << " is positive\n";
 }
 ```
+Early returns make code more readable by avoiding deep nesting and allowing the function to focus on valid cases.
 
-```cpp
-// ❌ Bad: Missing return type in C++
-doThing() { }  // error: return type required
-```
-
-```cpp
-// ✅ Good: Explicit return type
-void doThing() { }  // correct
-```
-
-## Files in this Chapter
-
-| File | What it demonstrates |
-|------|----------------------|
-| macros.cpp | Preprocessor directives, `#define`, and scope issues |
-| preprocessor.cpp | How `#include` works and preprocessor output |
-| void_functions.cpp | `void` return types, early returns, and common pitfalls |
-
+────────────────────────────────────────────────────
 ## What to Remember
-- Avoid using the result of a `void` function; it's a compile-time error.
-- The preprocessor is scope-unaware, so macros can unintentionally affect large portions of code.
-- Always specify a return type for functions in C++; omitting it is illegal.
+⚠️ **Avoid using the return value of a void function** — it will result in a compile-time error.
+⚠️ **Use early returns for error handling** to keep code clean and focused on valid cases.
+⚠️ **Always declare the return type of a function** — omitting it is illegal in C++.
