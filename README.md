@@ -102,6 +102,8 @@ cpp-learning/
 │   ├── switch.cpp
 │   └── README.md
 ├── 09_error_handling/
+│   ├── assert.cpp
+│   ├── errrors.cpp
 │   └── README.md
 ├── 10_type_system/
 │   └── README.md
@@ -162,7 +164,7 @@ cpp-learning/
 | Ch.6 | Operators | `✅ Done` | 3 |
 | Ch.7 | Scope, Duration, Linkage | `✅ Done` | 6 |
 | Ch.8 | Control Flow | `✅ Done` | 5 |
-| Ch.9 | Error Detection & Handling | `⬜ Upcoming` | 0 |
+| Ch.9 | Error Detection & Handling | `🔄 In Progress` | 2 |
 | Ch.10 | Type Conversion & Deduction | `⬜ Upcoming` | 0 |
 | Ch.11 | Function Overloading & Templates | `⬜ Upcoming` | 0 |
 | Ch.12 | References & Pointers | `⬜ Upcoming` | 0 |

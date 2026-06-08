@@ -49,5 +49,6 @@ foreach(SOURCE_FILE ${ALL_SOURCES})
             08_control_flow/loops.cpp
             08_control_flow/halt.cpp
             08_control_flow/random_numbers.cpp
-            09_error_handling/errrors.cpp)
+            09_error_handling/errrors.cpp
+            09_error_handling/assert.cpp)
 endforeach()
