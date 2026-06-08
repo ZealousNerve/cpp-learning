@@ -164,7 +164,7 @@ cpp-learning/
 | Ch.6 | Operators | `✅ Done` | 3 |
 | Ch.7 | Scope, Duration, Linkage | `✅ Done` | 6 |
 | Ch.8 | Control Flow | `✅ Done` | 5 |
-| Ch.9 | Error Detection & Handling | `🔄 In Progress` | 2 |
+| Ch.9 | Error Detection & Handling | `✅ Done` | 2 |
 | Ch.10 | Type Conversion & Deduction | `⬜ Upcoming` | 0 |
 | Ch.11 | Function Overloading & Templates | `⬜ Upcoming` | 0 |
 | Ch.12 | References & Pointers | `⬜ Upcoming` | 0 |
