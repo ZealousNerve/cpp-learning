@@ -23,7 +23,8 @@
     "07_scope_linkage",
     "08_control_flow",
     "09_error_handling",
-    "10_type_system"
+    "10_type_system",
+    "11_templates"
   ],
-  "last_run": "2026-06-09T00:21:49.509730"
+  "last_run": "2026-06-09T00:26:51.999249"
 }
