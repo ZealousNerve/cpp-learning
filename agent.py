@@ -32,7 +32,8 @@ GLOBAL_README   = REPO_ROOT / "README.md"
 CHAPTER_PATTERN = re.compile(r"^\d{2}_")
 
 # Ollama — qwen3:8b fits comfortably in RTX 4060 8GB VRAM
-OLLAMA_URL   = "http://localhost:11434/api/chat"
+_OLLAMA_BASE = os.environ.get("OLLAMA_HOST", "http://localhost:11434")
+OLLAMA_URL   = f"{_OLLAMA_BASE}/api/chat"
 OLLAMA_MODEL = "qwen3:8b"
 
 DRY_RUN = "--dry-run" in sys.argv
@@ -45,7 +46,7 @@ DRY_RUN = "--dry-run" in sys.argv
 def init_ollama() -> None:
     """Verify Ollama is running and the model is available."""
     try:
-        req = urllib.request.Request("http://localhost:11434/api/tags")
+        req = urllib.request.Request(f"{_OLLAMA_BASE}/api/tags")
         with urllib.request.urlopen(req, timeout=5) as res:
             data   = json.loads(res.read())
             models = [m["name"] for m in data.get("models", [])]

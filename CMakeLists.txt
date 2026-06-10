@@ -1,10 +1,9 @@
 cmake_minimum_required(VERSION 3.20)
 project(cpp-learning)
 
-set(CMAKE_CXX_STANDARD 20)  # Changed to 20
+set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-# Compiler flags
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wextra")
 set(CMAKE_CXX_FLAGS_DEBUG "-O0 -g")
 set(CMAKE_CXX_FLAGS_RELEASE "-O2")
@@ -23,6 +22,5 @@ foreach(SOURCE_FILE ${ALL_SOURCES})
     string(REPLACE ".cpp" "" TARGET_NAME "${TARGET_NAME}")
     string(REPLACE " " "_" TARGET_NAME "${TARGET_NAME}")
 
-    # ONLY compile this one source file — no dependencies
     add_executable(${TARGET_NAME} ${SOURCE_FILE})
 endforeach()

@@ -64,8 +64,8 @@ cpp-learning/
 │   ├── void_functions.cpp
 │   └── README.md
 ├── 03_debugging/
-│   ├── debugging_strategy.cpp
 │   ├── Integrated_debugger.cpp
+│   ├── debugging_strategy.cpp
 │   └── README.md
 ├── 04_data_types/
 │   ├── casting.cpp
@@ -75,9 +75,9 @@ cpp-learning/
 │   ├── other_datatypes.cpp
 │   └── README.md
 ├── 05_constants_strings/
+│   ├── Literals.cpp
 │   ├── constant_variables.cpp
 │   ├── constexpr.cpp
-│   ├── Literals.cpp
 │   ├── optimization.cpp
 │   ├── strigns.cpp
 │   └── README.md
@@ -121,6 +121,12 @@ cpp-learning/
 │   ├── function_templates.cpp
 │   └── README.md
 ├── 12_references_pointers/
+│   ├── Pointers.cpp
+│   ├── compound_datatypes.cpp
+│   ├── lvalue_refrences.cpp
+│   ├── lvalue_rvalue.cpp
+│   ├── passing_returning.cpp
+│   ├── typeDeduction_optional.cpp
 │   └── README.md
 ├── 13_enums_structs/
 │   └── README.md
@@ -178,7 +184,7 @@ cpp-learning/
 | Ch.9 | Error Detection & Handling | `✅ Done` | 2 |
 | Ch.10 | Type Conversion & Deduction | `✅ Done` | 8 |
 | Ch.11 | Function Overloading & Templates | `✅ Done` | 3 |
-| Ch.12 | References & Pointers | `⬜ Upcoming` | 0 |
+| Ch.12 | References & Pointers | `🔄 In Progress` | 6 |
 | Ch.13 | Enums & Structs | `⬜ Upcoming` | 0 |
 | Ch.14 | Introduction to Classes | `⬜ Upcoming` | 0 |
 | Ch.15 | More on Classes | `⬜ Upcoming` | 0 |

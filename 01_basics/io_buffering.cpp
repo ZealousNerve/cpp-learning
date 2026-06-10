@@ -99,5 +99,13 @@ int main()
     input_buffering_demo();
     newline_responsibility();
 
+    //an example of buffering:
+    char ignore {}; //to eat the slash between fractions
+    std::cout << "Enter a fraction: ";
+    std::cin >> num1 >> ignore >> den1; //suppose we enter 4/3,
+    //4 will be stored in num1, / will be stored into ignore, and 3 will be stored into den1
+    //in this way we are ignoring or eating the second buffered input
+
+
     return 0;
 }
