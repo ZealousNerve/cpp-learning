@@ -122,7 +122,7 @@ int main()
 
     // ── 3.3  constexpr — string_view wins here ──────────────────────────────
     constexpr std::string_view CONSTANT { "Resolved at compile time" };
-    // constexpr std::string   BAD      { "..." }; // ❌ not constexpr before C++20
+    constexpr std::string   BAD{"hello"}; // ❌ not constexpr before C++20
     std::cout << CONSTANT << '\n';
 
 
@@ -135,7 +135,7 @@ int main()
     //                            ✅ explicit only  (forces you to see the cost)
 
     std::string_view sv { "Convert me" };
-    std::string      s  { owned };         // ✅ string → string_view: implicit
+    std::string_view s  { owned };         // ✅ string → string_view: implicit
 
     // printByValue(sv);                          // ❌ compile error
     printByValue(std::string { sv });             // ✅ explicit constructor
@@ -145,7 +145,7 @@ int main()
 
 
     // ═══════════════════════════════════════════════════════════════════════
-    //  PART 5 — THE DANGLING VIEW TRAP  ⚠️  (most important safety rule)
+    //  PART 5 — THE DANGLING VIEW TRAP (most important safety rule)
     // ═══════════════════════════════════════════════════════════════════════
     //
     //  string_view does NOT keep its target alive.

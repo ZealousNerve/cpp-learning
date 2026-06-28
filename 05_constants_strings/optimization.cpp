@@ -64,9 +64,7 @@ In a few other cases, the C++ language requires an expression that can be evalua
 constexpr variables require an initializer that can be evaluated at compile-time:
 */
 
-constexpr int x { expr }; // Because variable x is constexpr, expr must be evaluatable at compile-time
-
-
+constexpr int x1 { 4 + 3 }; // Because variable x1 is constexpr, expr must be evaluatable at compile-time
 
 
 /*
@@ -92,6 +90,7 @@ int getNumber()
 
 // The return value of a non-constexpr function is a runtime expression
 // even when the return expression is a constant expression
+
 int five()
 {
     return 5;      // this return expression is a constant expression
@@ -122,5 +121,3 @@ int main()
 
 /*The compiler is only required to evaluate constant expressions at compile-time in contexts that require a constant
 expression. It may or may not do so in other cases.*/
-
-

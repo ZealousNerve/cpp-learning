@@ -26,7 +26,7 @@ int main () {
     // Explicitly converts any type to bool, then compares with !=
     // Verbose but crystal clear. Use this in real/production code.
 
-    int x = 5, y = 0;
+    int x = 5, y = 0, z = 0;
 
     if (static_cast<bool>(x) != static_cast<bool>(y))
     {

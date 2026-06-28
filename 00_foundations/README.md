@@ -30,6 +30,7 @@
     - Make learning **fun** — tired programmers make more bugs.
 
 **How to learn effectively:**
+
 | Practice | Why it helps |
 |----------|--------------|
 | Type examples by hand | Trains muscle memory, exposes common typos |

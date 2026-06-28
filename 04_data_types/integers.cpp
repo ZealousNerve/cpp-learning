@@ -20,18 +20,18 @@ Size/Type          Range
 32-bit signed	-2,147,483,648 to 2,147,483,647
 64-bit signed	-9,223,372,036,854,775,808 to 9,223,372,036,854,775,807
 
-an n-bit signed variable has a range of -(2n-1) to (2n-1)-1.
+an n-bit signed variable has a range of -(2^(n-1)) to (2^(n-1))-1.
 The above ranges assume “two’s complement” binary representation.
 
 In prior standards, sign-magnitude and ones complement representations were permitted for historical reasons.
-Such representations produce values in the range -(2n-1-1) to +(2n-1-1).
+Such representations produce values in the range -(2^(n-1)-1) to +(2^(n-1)-1).
 
 The number 140 requires 9 bits to represent (8 magnitude bits and 1 sign bit)
  */
 
 
 /*
-f an arithmetic operation (such as addition or multiplication) attempts to create a value outside the range
+if an arithmetic operation (such as addition or multiplication) attempts to create a value outside the range
 that can be represented, this is called integer overflow (or arithmetic overflow). For signed integers,
 integer overflow will result in undefined behavior.
  */
@@ -43,7 +43,7 @@ int main(){
  std::cout << x << '\n';
 
  x = x + 1; // integer overflow, undefined behavior
- std::cout << x << '\n'; //prints (-2147483647)
+ std::cout << x << '\n'; //prints (-2'147'483'648)
  return 0;
 }
 
@@ -58,12 +58,12 @@ Size/Type	      Range
 32 bit unsigned	 0 to 4,294,967,295
 64 bit unsigned	 0 to 18,446,744,073,709,551,615
 
-An n-bit unsigned variable has a range of 0 to (2n)-1.
+An n-bit unsigned variable has a range of 0 to (2^n)-1.
 
 If an unsigned value is out of range, it is divided by one greater than the largest number of the type, and only the remainder kept.
 
 The number 280 is too big to fit in our 1-byte range of 0 to 255. 1 greater than the largest number of the type is 256.
-Therefore, we divide 280 by 256, getting 1 remainder 24. The remainder of 24 is what is stored.
+Therefore, we divide 280 by 256, getting a remainder 24. The remainder of 24 is what is stored.
 
 It’s possible to wrap around the other direction as well. 0 is representable in a 2-byte unsigned integer,
 so that’s fine. -1 is not representable, so it wraps around to the top of the range, producing the value 65535.

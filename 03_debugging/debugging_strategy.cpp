@@ -10,17 +10,17 @@ my compiler is not working, so to know this, we need to reproduce the error agai
 /*
  * debugging tactic #1:commenting out a part of code
    suppose an issue is there, and we comment some function based on our instinct if commenting that make the code run,
-   the definitely that's the part where we are having the problem, if not resolved and issue still persists then the
+   then definitely that's the part where we are having the problem, if not resolved and issue still persists then the
    error is caused due to other function, or if some other error pops then maybe the code is dependent mainly on that
    commented function so we need to uncomment that
 
  * debugging tactic #2:validating our code flow
    sometimes in a program a function is called once or many times, now how do we know whether a function is called or not
    or which function is called at the time of issue, so that's why in our code at the start of every function we print
-   a line like "inside main function" or "main function is called" so that at we can check okay this part of code run
+   a line like "inside main function" or "main function is called" so that we can check okay this part of code run
    but no error till now, ohh! this part of code run and the error is just after this step
 
-   we use std::cerr instead of std::out for this case, because std::cout is buffered means there could be some delay before
+   we use std::cerr instead of std::cout for this case, because std::cout is buffered means there could be some delay before
    printing, so maybe the error cause the code to crash and our buffer isn't printed yet so how do we know which part
    was causing the problem, and that's why we use std::cerr because it is unbuffered so it will use more resource but
    print immediately
@@ -61,6 +61,7 @@ my compiler is not working, so to know this, we need to reproduce the error agai
    the code of it is given below:
  */
 
+/*
 #include <plog/Log.h> // Step 1: include the logger headers
 #include <plog/Initializers/RollingFileInitializer.h>
 #include <iostream>
@@ -82,6 +83,7 @@ int main(){
 }
 
   plog::init(plog::none, "Logfile.txt"); // used none to disable the logging
+  */
 
 //output--------
 //2018-12-26 20:03:33.295 DEBUG [4752] [main@19] main() called

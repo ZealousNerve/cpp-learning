@@ -1,6 +1,5 @@
 // ============================================================
-//  CHAPTER 11 — FUNCTION OVERLOADING (11.1 / 11.2 / 11.3 / 11.4)
-//  Topics : intro · differentiation · resolution · = delete
+//  CHAPTER 11 — FUNCTION OVERLOADING
 // ============================================================
 
 #include <iostream>

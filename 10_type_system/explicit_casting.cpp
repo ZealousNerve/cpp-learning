@@ -39,7 +39,7 @@ int main(){
     There is one thing you can do with a C-style cast that you can’t do with C++ casts: C-style casts can convert a
     derived object to a base class that is inaccessible (e.g. because it was privately inherited).*/
 
-//STATIC CAST:
+//STATIC CAST(The C++ style cast):
 
     // static cast x to a double so we get floating point division
     std::cout << static_cast<double>(x) / y << '\n'; // prints 2.5
@@ -50,7 +50,7 @@ int main(){
     There are two important properties of static_cast.
 
     First, static_cast provides compile-time type checking. If we try to convert a value to a type and the compiler
-    doesn’t know how to perform that conversion, we will get a compilation error.*/
+    doesn't know how to perform that conversion, we will get a compilation error.*/
 
     // a C-style string literal can't be converted to an int, so the following is an invalid conversion
     int z { static_cast<int>("Hello") }; // invalid: will produce compilation error

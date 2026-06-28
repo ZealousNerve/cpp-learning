@@ -69,7 +69,8 @@ int demonstrate_ifdef()
  
 #ifdef PRINT_BOB
     std::cout << "Bob\n";           // ❌ NOT compiled, PRINT_BOB was never #defined
-#endif                              //    this entire block is removed before compilation
+#endif
+    //    this entire block is removed before compilation
  
     return 0;
 }
@@ -77,8 +78,7 @@ int demonstrate_ifdef()
  
 // ── #ifndef, the opposite of #ifdef ──────────────────────────────────────────
 //
-// #ifndef means "if NOT defined." Compile this block only if the identifier
-// has NOT been #defined yet.
+// #ifndef means "if NOT defined." Compile this block only if the identifier has NOT been #defined yet.
 // This is the key mechanism behind header guards (see header_guards.cpp).
  
 int demonstrate_ifndef()
@@ -123,7 +123,7 @@ int demonstrate_if_zero()
     return 0;
 }
  
- 
+
 int main()
 {
     // Macro substitution in action:

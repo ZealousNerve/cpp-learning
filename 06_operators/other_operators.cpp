@@ -12,9 +12,9 @@ int main(){
     /*The comma operator (,) allows you to evaluate multiple expressions wherever a single expression is allowed.
     The comma operator evaluates the left operand, then the right operand, and then returns the result of the right operand.*/
 
-    int x{ 1 };
+    int x1{ 1 };
     int y{ 2 };
-    std::cout << (++x, ++y) << '\n'; // increment x and y, evaluates to the right operand
+    std::cout << (++x1, ++y) << '\n'; // increment x and y, evaluates to the right operand
 
     /*First the left operand of the comma operator is evaluated, which increments x from 1 to 2. Next,
     the right operand is evaluated, which increments y from 2 to 3. The comma operator returns the
@@ -66,7 +66,7 @@ int main(){
 
 
     It is safe to compare a floating point literal with a variable of the same type that has been initialized with a
-    literal of the same type, so long as the number of significant digits in each literal does not exceed the minimum
+    literal of the same type, so as long as the number of significant digits in each literal does not exceed the minimum
     precision for that type. Float has a minimum precision of 6 significant digits, and double has a minimum precision
     of 15 significant digits.
 
@@ -76,18 +76,18 @@ int main(){
 //LOGICAL operator
 
     /*
-     Logical NOT	!	     !x	      true if x is false, or false if x is true
-     Logical AND	&&	    x && y	  true if x and y are both true, false otherwise
-     Logical OR	    ||	    x || y	  true if either (or both) x or y are true, false otherwise
+     Logical NOT	!	     !x	      true if x is false, or false if x is true,
+     Logical AND	&&	    x && y	  true if x and y are both true, false otherwise,
+     Logical OR	    ||	    x || y	  true if either (or both) x or y are true, false otherwise.
 
-    there is also a concept about short circuit evaluation */
+    There is also a concept about short circuit evaluation */
 
-    int x{ 5 };
-    int y{ 7 };
-    if (!x > y)
-        std::cout << x << " is not greater than " << y << '\n';
+    int x2{ 5 };
+    int y1{ 7 };
+    if (!x2 > y1)
+        std::cout << x2 << " is not greater than " << y1 << '\n';
     else
-        std::cout << x << " is greater than " << y << '\n';
+        std::cout << x2 << " is greater than " << y1 << '\n';
 
     //output: 5 is greater than 7
 
@@ -103,11 +103,7 @@ int main(){
     !(x || y) is equivalent to !x && !y
 
 
-
     */
-
-
-
 
     return 0;
 }

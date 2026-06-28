@@ -94,16 +94,16 @@ auto multiply(int x, int y) -> int {  // same as: int multiply(int x, int y)
 
 // WHY trailing syntax?
 // a) Complex return types are easier to read:
-//    std::common_type_t<int,double> compare(int, double);        // hard
-//    auto compare(int, double) -> std::common_type_t<int,double>;// easier
+    std::common_type_t<int,double> compare(int, double);        // hard
+    auto compare(int, double) -> std::common_type_t<int,double>;// easier
 
 // b) Aligns function names neatly in declarations:
-//    auto add(int x, int y)          -> int;
-//    auto divide(double x, double y) -> double;
-//    auto printSomething()           -> void;
+    auto add1(int x, int y)         -> int;
+    auto divide(double x, double y) -> double;
+    auto printSomething()           -> void;
 
 // c) Required when return type depends on parameter types (decltype uses)
-//    auto add(int x, double y) -> std::common_type_t<decltype(x), decltype(y)>;
+    auto add(int x, double y) -> std::common_type_t<decltype(x), decltype(y)>;
 //    (compiler hasn't seen x,y yet at the return type position in normal syntax)
 
 

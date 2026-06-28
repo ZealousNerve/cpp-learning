@@ -54,7 +54,7 @@
 //
 //   AFTER preprocessing (what the compiler actually sees):
 //   ┌──────────────────────────────────────────────────────────────────────────┐
-//   │ [entire contents of <iostream> pasted here, thousands of lines]        │
+//   │ [entire contents of <iostream> pasted here, thousands of lines]          │
 //   │ int main() {                                                             │
 //   │     std::cout << "Hello\n";                                              │
 //   │ }                                                                        │

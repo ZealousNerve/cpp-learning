@@ -8,6 +8,7 @@ void printDigitName(int x){
 
         case 1:
             int y; // okay but bad practice: definition is allowed within a case
+            a = 5;
             y = 4; // okay: assignment is allowed
             std::cout << "One" << y;
             break;

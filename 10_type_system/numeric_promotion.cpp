@@ -63,7 +63,7 @@ int main()
 //  int   → long    ❌ NOT a promotion (numeric conversion instead)
 //
 // Promotion = specific narrow-to-efficient-width upgrades only.
-// Conversion = everything else (covered in 10.3).
+// Conversion = everything else (covered in 10).
 //
 // Why does this matter? In function overload resolution (ch.11),
 // compiler PREFERS promotions over conversions when picking

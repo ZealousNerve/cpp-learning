@@ -329,7 +329,7 @@ void section12_demo()
 
 
 // =============================================================================
-// SECTION 13 — RETURNING REFERENCE PARAMETERS BY REFERENCE (ALWAYS SAFE)
+// SECTION 13 — RETURNING REFERENCE PARAMETERS BY REFERENCE (ALWAYS SAFE) 
 // =============================================================================
 
 // If a parameter came in by reference, the original object lives in the caller's scope.

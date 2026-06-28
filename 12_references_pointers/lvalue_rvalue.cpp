@@ -5,7 +5,7 @@
 //
 // Every expression has two properties:
 //   1. TYPE       → what kind of data the expression produces (int, double, etc.)
-//   2. VALUE CAT  → whether the expression is an lvalue or rvalue
+//   2. VALUE CAT  → whether the expression is a lvalue or rvalue
 //
 // This is what lets the compiler catch errors like:
 //   5 = x;   // ❌ can't assign to a literal — 5 is a rvalue, not a modifiable lvalue
@@ -56,8 +56,8 @@ int return5() { return 5; }
 
 void rvalue_examples()
 {
-    int x { 5 };         // 5 is an rvalue
-    const double d{1.2}; // 1.2 is an rvalue
+    int x { 5 };         // 5 is a rvalue
+    const double d{1.2}; // 1.2 is a rvalue
 
     int z  { return5() };           // return5() is an rvalue — returned by value, temporary
     int w  { x + 1 };               // x + 1 is an rvalue — temporary result

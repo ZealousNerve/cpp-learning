@@ -1,7 +1,12 @@
-//To ensure that all output from std::cout is output immediately, you can temporarily add the following statement to the top of your main() function:
+//To ensure that all output from std::cout is output immediately, you can temporarily add the following statement to the
+//top of your main() function:
 
-std::cout << std::unitbuf; // enable automatic flushing for std::cout (for debugging)
-
+#include <iostream>
+int main() {
+  std::cout << std::unitbuf; // enable automatic flushing for std::cout (for debugging)
+  std::cout << "Hello";
+  std::cout << "World!";
+}
 /*
   The step into command executes the next statement in the normal execution path of the program, and then pauses
   execution of the program so we can examine the program’s state using the debugger. If the statement being executed

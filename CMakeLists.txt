@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.20)
 project(cpp-learning)
 
-set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wextra")
@@ -22,5 +22,7 @@ foreach(SOURCE_FILE ${ALL_SOURCES})
     string(REPLACE ".cpp" "" TARGET_NAME "${TARGET_NAME}")
     string(REPLACE " " "_" TARGET_NAME "${TARGET_NAME}")
 
-    add_executable(${TARGET_NAME} ${SOURCE_FILE})
+    add_executable(${TARGET_NAME} ${SOURCE_FILE}
+            13_enums_structs/structs.cpp
+    )
 endforeach()

@@ -19,5 +19,3 @@
         Classes
         Unions*/
 
-
-//L-value & R-value:

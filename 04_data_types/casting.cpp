@@ -27,21 +27,20 @@ void print(int x){
 
 int main(){
     print( static_cast<int>(5.5) ); // explicitly convert double value 5.5 to an int
-    return 0;
-}
+
 
 
 /*suppose we want to do type conversion from unsigned int to signed or vice versa, and if there is an issue in range
  like, 5 is same in both types, but if out of range then there will be a problem, and that will be solved by modulo wrapping
  */
 
-#include <iostream>
 
+    int s { -1 };
+    std::cout << static_cast<unsigned int>(s) << '\n'; // prints 4294967295
 
-int s { -1 };
-std::cout << static_cast<unsigned int>(s) << '\n'; // prints 4294967295
+    unsigned int u { 4294967295 }; // largest 32-bit unsigned int
+    std::cout << static_cast<int>(u) << '\n'; // implementation-defined prior to C++20, -1 as of C++20
 
-unsigned int u { 4294967295 }; // largest 32-bit unsigned int
-std::cout << static_cast<int>(u) << '\n'; // implementation-defined prior to C++20, -1 as of C++20
+    return 0;
 
-return 0;
+}

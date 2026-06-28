@@ -68,7 +68,7 @@ void part2_rules() {
 
   Lifetimes are INDEPENDENT:
     - ref can die before its referent → no problem
-    - referent dies before ref → DANGLING REFERENCE → undefined behavior ⚠️
+    - referent dies before ref → DANGLING REFERENCE → undefined behavior ⚠
 
   "Variable" is technically a misnomer for references (variables are objects with names,
    references are neither guaranteed to be objects nor have independent storage).

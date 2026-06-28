@@ -118,6 +118,8 @@ void demo_initialization()
     // int* p { 0x0012FF7C };   // ❌ treated as integer literal, not an address
 
     (void)wild; (void)null_ptr; (void)ptr; (void)dPtr;
+    //the above line as seen is to suppress all the compiler warnings about those expression being unused
+    //[[maybe_unused]] this is a modern preferred approach
 }
 
 
@@ -368,6 +370,8 @@ void demo_legacy_null()
     //     f(nullptr);    // unambiguously calls f(int*)
 
     (void)p1; (void)p2; (void)p3; (void)p4;
+    //the above line as seen is to suppress all the compiler warnings about those expression being unused
+    //[[maybe_unused]] this is a modern preferred approach for the same task
 }
 
 

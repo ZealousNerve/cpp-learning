@@ -62,7 +62,6 @@ expensive object once, and then reuse it whenever the function is called.*/
     const int g_c { 1 };     // const global variable g_c, initialized with a value
     constexpr int g_d { 2 }; // constexpr global variable g_d, initialized with a value
 
-    int main(){return 0;}
 
 //----------------------------------------------------------------------------------------------------------------------
 
@@ -107,10 +106,6 @@ avoid variable shadowing*/
 
 
 
-
-
-
-
 /*Duration summary:-
 
 A variable’s duration determines when it is created and destroyed.
@@ -123,11 +118,3 @@ A variable’s duration determines when it is created and destroyed.
     b. Static local variables
 3. Variables with dynamic duration are created and destroyed by programmer request. This includes:
     a. Dynamically allocated variables*/
-
-
-
-
-
-
-
-

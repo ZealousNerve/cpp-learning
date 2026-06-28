@@ -8,12 +8,12 @@ int getSquareSides(){
 }
 
 //wave.h:--------------------
-#include "square.h"
+//     #include "square.h"
 
 
 //main.cpp--------------------
-#include "square.h"
-#include "wave.h"
+//    #include "square.h"
+//    #include "wave.h"
 
 int main(){
     return 0;
@@ -32,18 +32,20 @@ int main(){
 
 #ifndef SQUARE_H
 #define SQUARE_H
-int getSquareSides(){
-    return 4;
-}
+//    int getSquareSides(){
+//        return 4;
+//    }
 #endif
 
 //so all the header files must contain this header guards, as you can see the ifdef directives check whether that square.h
 //is defined earlier, if yes then do nothing if not defined then add that definition
 
-//remember these preprocessors are just copy and paste replacement thing, so now if square.h is imported then the main.cpp will
-//contain that square.h and that ifndef directive will run and define the function as it wasn't defined earlier,
-//then when main.cpp includes wave.h then, then square.h in wave.h already sees that it is defined in main.cpp so it won't let
-//it get defined again
+/*
+remember these preprocessors are just copy and paste replacement thing, so now if square.h is imported then the main.cpp will
+contain that square.h and that ifndef directive will run and define the function as it wasn't defined earlier,
+then when main.cpp includes wave.h then, then square.h in wave.h already sees that it is defined in main.cpp so it won't let
+it get defined again
+*/
 
 
 //by convention is set to the full filename of the header file, typed in all caps, using underscores for spaces or punctuation.
@@ -55,13 +57,10 @@ int getSquareSides(){
 
 
 
-
-
-
 // Modern compilers support a simpler, alternate form of header guards using the #pragma preprocessor directive:
 
-//With traditional header guards, the developer is responsible for guarding the header (by using preprocessor directives
-//#ifndef, #define, and #endif). With #pragma once, we’re requesting that the compiler guard the header.
+/*With traditional header guards, the developer is responsible for guarding the header (by using preprocessor directives
+#ifndef, #define, and #endif). With #pragma once, we’re requesting that the compiler guard the header.*/
 
 
 #pragma once

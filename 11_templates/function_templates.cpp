@@ -73,7 +73,7 @@ T max(T x, T y)
 // ── 3 KINDS OF TEMPLATE PARAMETERS (for reference) ──────────
 //
 //  1. Type template parameters      → placeholder for a TYPE   (this chapter)
-//  2. Non-type template parameters  → placeholder for a VALUE  (11.9)
+//  2. Non-type template parameters  → placeholder for a VALUE  (this chapter)
 //  3. Template template parameters  → placeholder for a TEMPLATE (advanced, not covered here)
 
 
@@ -584,3 +584,37 @@ int main()
 //
 //  If a function template is only used in ONE .cpp file, you CAN define it
 //  in that .cpp file. But the moment another file needs it, move it to a header.
+
+
+class Doubts {
+    // DECLARE T (new param) — only before a definition
+    template <typename T>
+    T demo(T x) { return x + 1; }
+
+    // SUPPLY T (value for existing param) — calls & specializations
+    void supply() {
+        demo<int>(5);     // explicit
+        demo(5);          // or let compiler deduce T from argument
+    }
+    // FULL SPECIALIZATION
+    // template <>      -> ALWAYS empty, fixed rule, zero params left
+    // <const char*>     -> optional here, since T is deducible from param
+
+    //template <>
+    //const char* demo(const char* x) = delete;          // short form
+
+    //template <>
+    //const char* demo<const char*>(const char* x) = delete; // same, explicit
+
+    // MUST write explicit <T> when T can't be deduced
+    // (e.g. T appears only in return type, not in params)
+    template <typename T>
+    T getDefault();
+    template <>
+    int getDefault<int>() { return 0; }   // no param to deduce from -> required
+
+    // RULE:
+    // template <typename T>  = DECLARING a new param (before def)
+    // Name<Type>             = SUPPLYING a value for existing param (call/specialize)
+    // Never mix the two — typename only valid in declaration context
+};

@@ -5,7 +5,7 @@ namespace NamespaceIdentifier
 }
 
 /*A namespace must be defined either in the global scope, or inside another namespace. we can call it using the scope
-resolution operator, eg. NamespaceIdentifier::func(), and in same way ::func() will look in global namespace*/
+resolution operator, e.g. NamespaceIdentifier::func(), and in same way ::func() will look in global namespace*/
 
 
 

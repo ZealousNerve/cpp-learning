@@ -94,10 +94,6 @@ void auto_with_suffixes()
 
 // ────────────────────────────────────────────────────────────
 //  SECTION 4: STRING LITERALS — C-style vs Modern C++
-//
-//  This matters for Jarvis: every voice command, every string
-//  you pass to an LLM API, every system command — they're strings.
-//  Knowing which type to use is a real performance decision.
 // ────────────────────────────────────────────────────────────
 
 #include <string>
@@ -220,7 +216,7 @@ void base_output_demo()
 
 #include <bitset>
 #include <format>   // C++20 — needs compiler support
-// #include <print> // C++23 — uncomment if your compiler supports it
+#include <print> // C++23 — uncomment if your compiler supports it
 
 void binary_output_demo()
 {
@@ -243,7 +239,7 @@ void binary_output_demo()
     std::cout << std::format("{:08b}\n", val);   // 11000101 (zero-padded to 8 digits)
 
     // Method 3: std::println — C++23, cleanest syntax
-    // std::println("{:b} {:#b}", val, val);  // uncomment for C++23
+     std::println("{:b} {:#b}", val, val);  // uncomment for C++23
 }
 
 
@@ -264,24 +260,3 @@ int main()
 
     return 0;
 }
-
-
-// ────────────────────────────────────────────────────────────
-//  MENTAL CHECK (answer before running):
-//
-//  Q1: What does this print?
-//      std::cout << sizeof(5) << sizeof(5L) << sizeof(5LL);
-//      → Think: int, long, long long. Size depends on platform.
-//
-//  Q2: What type is 'x' here?
-//      auto x = "Jarvis"sv;
-//      → std::string_view
-//
-//  Q3: Is this safe? Why or why not?
-//      std::string_view sv = "hello"s;
-//      → Technically unsafe: the "hello"s temporary is destroyed
-//        after the line, leaving sv dangling. Use string, not sv here.
-//
-//  Q4: What does std::hex do to SUBSEQUENT outputs?
-//      → It's sticky — stays hex until you explicitly use std::dec.
-// ────────────────────────────────────────────────────────────

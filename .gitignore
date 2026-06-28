@@ -15,6 +15,8 @@ cmake-build-*/
 CMakeCache.txt
 Makefile
 *.cmake
+/cmake-build-debug/
+/cmake-build-release/
  
 # ── CLion ────────────────────────────────────
 .idea/

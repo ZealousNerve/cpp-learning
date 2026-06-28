@@ -29,7 +29,7 @@ we cannot instantiate, we can use it in function with no return type and paramet
  */
 
 #include <iostream>
-void value; // won't work, variables can't be defined with incomplete type void
+// void value; // won't work, variables can't be defined with incomplete type void
 
 //void as parameter-deprecated
 
@@ -42,8 +42,8 @@ int getValue(void){// void here means no parameters
 
 
 /*
-an object with n bits (where n is an integer) can hold 2n (2 to the power of n, also commonly written 2^n) unique values.
-Therefore, with an 8-bit byte, a byte-sized object can hold 28 (256) different values. An object that uses 2 bytes can
+an object with n bits (where n is an integer) can hold 2^n (2 to the power of n, also commonly written 2^n) unique values.
+Therefore, with an 8-bit byte, a byte-sized object can hold 2^8 (256) different values. An object that uses 2 bytes can
 hold 2^16 (65536) different values!
 
 The integral types char, short, int, long, and long long have a minimum size of 8, 16, 16, 32, and 64 bits respectively.
@@ -65,5 +65,5 @@ Integral        short            2 bytes         2 bytes
 Floating point  float            4 bytes         4 bytes
                 double           8 bytes         8 bytes
                 long double      8 bytes         8, 12, or 16 bytes
-Pointer         std::nullptr_t   4 bytes         4 or 8 byteso
+Pointer         std::nullptr_t   4 bytes         4 or 8 bytes
  */

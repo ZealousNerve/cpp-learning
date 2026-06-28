@@ -68,7 +68,7 @@ void multiDefault(int x = 10, int y = 20, int z = 30)
 // This matters because the compiler must see the default BEFORE the call site.
 
 void forward_declared(int x, int y = 99);   // default declared here
-void forward_declared(int x, int y)         // NOT redeclared here — that's an error
+void forward_declared(int x, int y)         // NOT redeclared here, GOOD!!
 {
     std::cout << x << ' ' << y << '\n';
 }

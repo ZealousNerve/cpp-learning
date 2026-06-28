@@ -3,8 +3,7 @@
 // ────────────────────────────────────────────────────────────
 
 /*
-  A const variable with an integral type AND a constant expression
-  initializer CAN be used in a constant expression.
+  A const variable with an integral type AND a constant expression initializer CAN be used in a constant expression.
   All other const variables CANNOT.
 
   The problem: just seeing the `const` keyword doesn't tell you
@@ -25,9 +24,8 @@ const int b { a };  // NOT a constant expression — initializer is a variable
 const int c { 5 };  // IS a constant expression — initializer is a literal
 
 // Ambiguous cases — have to trace the origin of someVar / getValue()
-const int d { someVar };    // usable in constant expression ONLY IF someVar is one
-const int e { getValue() }; // usable in constant expression ONLY IF getValue() returns constexpr
-
+const int d { //someVar };    // usable in constant expression ONLY IF someVar is constant
+const int e { //getValue() }; // usable in constant expression ONLY IF getValue() returns constexpr
 
 // ────────────────────────────────────────────────────────────
 //  PART 2: constexpr VARIABLES
@@ -105,7 +103,7 @@ int main() {
   A constexpr function CAN be called in a constant expression.
 
   RULES:
-    1. If the result is used where a constant expression is REQUIRED
+    1. If the result(the value from return) is used where a constant expression is REQUIRED
        (e.g. initializer of a constexpr variable) → MUST evaluate at compile-time.
 
     2. If the arguments are constant expressions but context doesn't require it
@@ -119,7 +117,6 @@ int main() {
     Whether they actually run at compile-time depends on context.
 */
 
-#include <iostream>
 
 // Non-constexpr function
 int max(int x, int y) {
